@@ -1,14 +1,25 @@
 import React from "react";
 // Rendering Engine - active webpage
 import ReactDOM from "react-dom";
-
-import Layout from "./components/Layout";
+import { Router, Route, IndexRoute, hashHistory } from "react-router";
+// Import Archives.js from location
+import Archives from "./pages/Archives";
+import Featured from "./pages/Featured";
+import Layout from "./pages/Layout";
+import Settings from "./pages/Settings";
 
 // Get app element from index.html
 const app = document.getElementById('app');
 // Render Layout into app
-ReactDOM.render(<Layout/>, app);
-
+ReactDOM.render(
+  <Router history={hashHistory}>
+    <Route path="/" component={Layout}>
+      <IndexRoute component={Featured}></IndexRoute>
+      <Route path="archives(/:article)" name="archives" component={Archives}></Route>
+      <Route path="settings" name="settings" component={Settings}></Route>
+    </Route>
+  </Router>,
+app);
 
 
 
