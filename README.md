@@ -9,7 +9,10 @@
 	
 	After install, to run server environemnt: 
 	$ npm run dev 
-	- Made script in package.json to shorten command: "$ npm run dev" == "$ webpack-dev-server --content-base src --inline --hot"  
+	- Made script in package.json to shorten command: "$ npm run dev" == "$ webpack-dev-server --content-base src --inline --hot" 
+
+	Using Flux, 
+	$ npm install flux 
 
 
 Webpack: https://www.youtube.com/watch?v=9kJVYpOqcVU
