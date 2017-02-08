@@ -7,6 +7,7 @@ import Archives from "./pages/Archives";
 import Featured from "./pages/Featured";
 import Layout from "./pages/Layout";
 import Settings from "./pages/Settings";
+import Playground from "./playground/Playground";
 
 // Get app element from index.html
 const app = document.getElementById('app');
@@ -17,6 +18,7 @@ ReactDOM.render(
       <IndexRoute component={Featured}></IndexRoute>
       <Route path="archives(/:article)" name="archives" component={Archives}></Route>
       <Route path="settings" name="settings" component={Settings}></Route>
+      <Route path="playground" name="playground" component={Playground}></Route>
     </Route>
   </Router>,
 app);

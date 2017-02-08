@@ -31,6 +31,7 @@ export default class Nav extends React.Component {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
           </div>
           <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
@@ -43,6 +44,9 @@ export default class Nav extends React.Component {
               </li>
               <li activeClassName="active">
                 <Link to="settings" onClick={this.toggleCollapse.bind(this)}>Settings</Link>
+              </li>
+              <li activeClassName="active">
+                <Link to="playground" onClick={this.toggleCollapse.bind(this)}>Playground</Link>
               </li>
             </ul>
           </div>
