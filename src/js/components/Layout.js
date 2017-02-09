@@ -51,6 +51,8 @@ render() {
     );
   }
 
+// Layout render method used in tutorial 
+
   // render() {
   //   const { user, tweets } = this.props;
 
