@@ -4,14 +4,16 @@ import { combineReducers, createStore } from "redux";
 const userReducer = (state={}, action) => {
   switch(action.type) {
     case "SET_NAME": {
-      return {...state, name: action.payload};
+      // ...state = immutable = use all previous values in state
+      state = {...state, name: action.payload};
       break;
     }
     case "SET_AGE": {
-      return {...state, age: action.payload};
+      state =  {...state, age: action.payload};
       break;
     }
   }
+  // returning new state. Have not changed previous state
   return state;
 }
 
