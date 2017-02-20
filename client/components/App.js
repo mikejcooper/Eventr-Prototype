@@ -6,9 +6,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-       " <NavigationBar />
-               <FlashMessagesList />
-               {this.props.children}"
+        <NavigationBar />
+        <FlashMessagesList />
+        {this.props.children}
       </div>
     );
   }
