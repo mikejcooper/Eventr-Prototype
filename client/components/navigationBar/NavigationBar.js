@@ -1,15 +1,32 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
-import { connect } from 'react-redux';
-
+import { openSignInModal } from '../../actions/modalActions';
+import { connect } from "react-redux";
 import css from './NavigationBar.css';
 
+
+// Maps dispatcher to props
+@connect()
 class NavigationBar extends React.Component {
   constructor() {
     super()
     this.state = {
       collapsed: true,
+      ScrollState: 1,
     };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  openSignInModal(){
+    this.props.dispatch(openSignInModal());
   }
 
   toggleCollapse() {
@@ -17,17 +34,28 @@ class NavigationBar extends React.Component {
     this.setState({collapsed});
   }
 
+  handleScroll(event) {
+    var scrollTopSetPoint = 800;
+    var targetOpacity = 0.5;
+    var scrollTop = event.target.body.scrollTop;
+    console.log("Here"+scrollTop);
+    if(scrollTop > scrollTopSetPoint) {
+      this.setState({ ScrollState: targetOpacity });
+    } else {
+      this.setState({ ScrollState: Math.max(1 - (scrollTop)/scrollTopSetPoint , targetOpacity).toString()});
+    }
+  }
+
   render() {
     const { location } = this.props;
     const { collapsed } = this.state;
     const navClass = collapsed ? "collapse" : "";
     var navOpacity = {
-      opacity: this.props.ScrollState,
+      opacity: this.state.ScrollState,
     };
 
-
     return (
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity}>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
@@ -47,7 +75,7 @@ class NavigationBar extends React.Component {
                 <Link to="/signup" onClick={this.toggleCollapse.bind(this)}>Sign Up</Link>
               </li>
               <li activeClassName="active">
-                <Link to="settings" onClick={this.toggleCollapse.bind(this)}>User</Link>
+                <Link onClick={this.toggleCollapse.bind(this), this.openSignInModal.bind(this)}>Sign In </Link>
               </li>
             </ul>
           </div>
