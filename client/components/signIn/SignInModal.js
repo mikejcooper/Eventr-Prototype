@@ -1,45 +1,69 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import SignInModalContainer from './SignInModalContainer'
 
 
 @connect((store) => {
   return {
-    modalSignIn: store.modal
+    modalSignIn: store.modal.signInBool
   };
 })
-
-class SignIn extends React.Component {
+class SignInModal extends React.Component {
+    constructor (props) {
+    super(props)
+    this.state = { showModal: false }
+  }
   render() {
+    this.state.showModal = this.props.modalSignIn
     console.log(this.props.modalSignIn);
-    if(true){
-      return (
-       <div>HEYYY</div>
-      );
-    }
-    return null;
+
+    return(
+      <SignInModalContainer showModal = {this.state.showModal}/>
+    )
   }
 }
 
-export default SignIn;
+export default SignInModal;
 
+    
+// @connect((store) => {
+//   return {
+//     modalSignIn: store.modal.signInBool
+//   };
+// })
 
+// class SignInModal extends React.Component {
+//   render() {
+//     const modalInstance = (
+//       <div className="static-modal">
+//         <Modal.Dialog>
+//           <Modal.Header>
+//             <Modal.Title>Modal title</Modal.Title>
+//           </Modal.Header>
 
-    // const modalInstance = (
-    //   <div className="static-modal">
-    //     <Modal.Dialog>
-    //       <Modal.Header>
-    //         <Modal.Title>Modal title</Modal.Title>
-    //       </Modal.Header>
+//           <Modal.Body>
+//             One fine body...
+//           </Modal.Body>
 
-    //       <Modal.Body>
-    //         One fine body...
-    //       </Modal.Body>
+//           <Modal.Footer>
+//             <Button>Close</Button>
+//             <Button bsStyle="primary">Save changes</Button>
+//           </Modal.Footer>
 
-    //       <Modal.Footer>
-    //         <Button>Close</Button>
-    //         <Button bsStyle="primary">Save changes</Button>
-    //       </Modal.Footer>
+//         </Modal.Dialog>
+//       </div>
+//     );
 
-    //     </Modal.Dialog>
-    //   </div>
-    // );
+//     console.log(this.props.modalSignIn);
+//     if(this.props.modalSignIn){
+//       return (
+//        modalInstance
+//       );
+//     }
+//     return null;
+//   }
+// }
+
+// export default SignInModal;
+
+    

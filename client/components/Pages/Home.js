@@ -1,7 +1,7 @@
 import React from 'react';
-import Playground from './Playground/Playground';
+import Playground from '../Playground/Playground';
 import css from './main.css'
-import SignInModal from './signIn/SignInModal';
+import SignInModal from '../signIn/SignInModal';
 
 class Home extends React.Component {
   render() {
