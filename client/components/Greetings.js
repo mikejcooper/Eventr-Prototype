@@ -3,12 +3,41 @@ import Playground from './Playground/Playground';
 import css from './main.css'
 
 class Greetings extends React.Component {
-  
-  render() {
-    return (
-      <div>
+    constructor() {
+    super()
+    this.state = {
+      ScrollState: 1,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(event) {
+    var scrollTopSetPoint = 100;
+    var targetOpacity = 0.2;
+    var scrollTop = event.target.body.scrollTop;
+    console.log(scrollTop);
+    if(scrollTop > scrollTopSetPoint) {
+      this.setState({ ScrollState: targetOpacity });
+    } else {
+      this.setState({ ScrollState: Math.max(1 - (scrollTop)/scrollTopSetPoint , targetOpacity).toString()});
+    }
+  }
+
+  render() {
+    console.log("gello");
+    return (
+      <div onScroll={this.handleScroll.bind(this)}>
+        <div class = 'label-default'> rgeg</div> 
         <Playground> </Playground>
+       <h2 style = {{"opacity" : this.state.ScrollState.toString()}}>hello</h2>
+
         <section class="bg-primary" id="about">
             <div class="container">
                 <div class="row">
@@ -162,6 +191,7 @@ class Greetings extends React.Component {
                 </div>
             </div>
         </div>
+    }
     </section>
 
     <aside class="bg-dark">

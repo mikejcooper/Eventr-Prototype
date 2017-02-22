@@ -14,6 +14,10 @@ let app = express();
 app.use(bodyParser.json());
 
 app.use('/api/users', users);
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+
+
 
 const compiler = webpack(webpackConfig);
 
