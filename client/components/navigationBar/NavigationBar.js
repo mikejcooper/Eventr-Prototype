@@ -1,8 +1,8 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
+import { connect } from 'react-redux';
 
-import css from './NavigationBar.css'
-
+import css from './NavigationBar.css';
 
 class NavigationBar extends React.Component {
   constructor() {
@@ -21,9 +21,13 @@ class NavigationBar extends React.Component {
     const { location } = this.props;
     const { collapsed } = this.state;
     const navClass = collapsed ? "collapse" : "";
+    var navOpacity = {
+      opacity: this.props.ScrollState,
+    };
+
 
     return (
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity}>
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >

@@ -22,7 +22,6 @@ class Greetings extends React.Component {
     var scrollTopSetPoint = 100;
     var targetOpacity = 0.2;
     var scrollTop = event.target.body.scrollTop;
-    console.log(scrollTop);
     if(scrollTop > scrollTopSetPoint) {
       this.setState({ ScrollState: targetOpacity });
     } else {
@@ -31,7 +30,6 @@ class Greetings extends React.Component {
   }
 
   render() {
-    console.log("gello");
     return (
       <div onScroll={this.handleScroll.bind(this)}>
         <div class = 'label-default'> rgeg</div> 

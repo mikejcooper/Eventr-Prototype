@@ -1,2 +1,5 @@
+// signupActions
 export const ADD_FLASH_MESSAGE = 'ADD_FLASH_MESSAGE';
 export const DELETE_FLASH_MESSAGE = 'DELETE_FLASH_MESSAGE';
+// appActions
+export const USER_SCROLL_EVENT = 'USER_SCROLL_EVENT';
