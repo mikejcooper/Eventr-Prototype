@@ -1,0 +1,33 @@
+.maintext {
+  text-align: center;
+  color: black;
+  font-weight: 900;
+}
+
+.subtext{
+  text-align: center;
+  font-size: 10pt;
+  max-width: 270px;
+  margin: 0 auto 10px auto;
+}
+
+.login-buttons {
+  display: flex; /* or inline-flex */
+  justify-content:  center;
+  align-items: center;
+
+}
+
+.login-button {
+	align-self: auto;
+	margin: 2%;  /* Magic! */
+}
+
+.form-control {
+	width: 20%; 
+}
+
+.form-group{
+	margin-right:50%;	
+	margin-left:50%;	
+}
