@@ -8,17 +8,15 @@ class SignInModalContainer extends React.Component {
     const modalInstance = (
       <div className="static-modal">
         <Modal.Dialog>
-          <Modal.Header>
-            <Modal.Title>Modal title</Modal.Title>
-          </Modal.Header>
+
 
           <Modal.Body>
             One fine body...
           </Modal.Body>
 
           <Modal.Footer>
-            <Button>Close</Button>
-            <Button bsStyle="primary">Save changes</Button>
+            <Button onClick={this.props.closeModal}>Close</Button>
+            <Button bsStyle="primary" onClick={fun => console.log("here")}>Save changes</Button>
           </Modal.Footer>
 
         </Modal.Dialog>
@@ -32,5 +30,4 @@ class SignInModalContainer extends React.Component {
     }
   }
 }
-
 export default SignInModalContainer;
