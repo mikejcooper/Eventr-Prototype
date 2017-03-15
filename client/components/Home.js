@@ -1,7 +1,6 @@
 import React from 'react';
 import Playground from './Playground/Playground';
 import css from './main.css'
-import SignInModal from './signIn/SignInModal';
 
 class Home extends React.Component {
   render() {
@@ -10,7 +9,6 @@ class Home extends React.Component {
         <div class = 'label-default'> rgeg</div> 
         <Playground> </Playground>
        <h2>hello</h2>
-       <SignInModal/>
         <section class="bg-primary" id="about">
             <div class="container">
                 <div class="row">
