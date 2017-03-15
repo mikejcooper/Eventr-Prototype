@@ -1,33 +1,38 @@
-.maintext {
-  text-align: center;
-  color: black;
-  font-weight: 900;
+
+.col-centered{
+float: none;
+margin: 0 auto;
 }
 
-.subtext{
-  text-align: center;
-  font-size: 10pt;
-  max-width: 270px;
-  margin: 0 auto 10px auto;
+.d-flex-centre {
+  display: flex;
+  justify-content: center;
 }
 
-.login-buttons {
-  display: flex; /* or inline-flex */
-  justify-content:  center;
-  align-items: center;
-
+.left, .right {
+    padding: 20px;   
 }
 
-.login-button {
-	align-self: auto;
-	margin: 2%;  /* Magic! */
+.form-control{
+/*	width: 50%;*/
 }
 
-.form-control {
-	width: 20%; 
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+      width: 400px; /* either % (e.g. 60%) or px (400px) */
+			display: inline-block;
+			text-align: left;
+			vertical-align: middle;
+    }
+    .modal {
+  		text-align: center;
+		}
+    .modal:before {
+	    display: inline-block;
+	    vertical-align: middle;
+	    content: " ";
+	    height: 100%;
+  }
 }
 
-.form-group{
-	margin-right:50%;	
-	margin-left:50%;	
-}
+
