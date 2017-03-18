@@ -1,26 +1,74 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import css from './main.css'
+import TextFieldGroup from '../common/TextFieldGroup';
+
+
 
 class SignInModalContainer extends React.Component { 
+
   render() {
     console.log(this.props.showModal)
     const modalInstance = (
-      <div className="static-modal">
-        <Modal.Dialog>
+        <div class="modal-fade">
+          <Modal.Dialog>
+            <Modal.Body>
+              <div class="row">
+                <h3 class="text-center">Good to see you again!</h3>
+                <p class="text-center">We've been waiting to show you <br></br> all the new events we found.</p>
+              </div>
 
 
-          <Modal.Body>
-            One fine body...
-          </Modal.Body>
+              <div class="row d-flex-centre">
+                <div class="left">
+                  <a href="https://en.wikipedia.org/wiki/Facebook" class="">
+                    <span class="i-facebook icon"></span>
+                    <span class="text">SIGN IN</span>
+                  </a>
+                </div>
+                <div class="right">
+                  <a href="https://en.wikipedia.org/wiki/Google" class="">
+                    <span class="i-gplus icon"></span>
+                    <span class="text">SIGN IN</span>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex-centre">
 
-          <Modal.Footer>
-            <Button onClick={this.props.closeModal}>Close</Button>
-            <Button bsStyle="primary" onClick={fun => console.log("here")}>Save changes</Button>
-          </Modal.Footer>
+                <form onSubmit={this.onSubmit}>
 
-        </Modal.Dialog>
-      </div>
+                  <TextFieldGroup
+                    label="Username"
+                    field="username"
+                  />
+                   <TextFieldGroup
+                    label="Password"
+                    field="password"
+                  />
+
+                </form>
+              </div>
+              <div class="d-flex-centre">
+                <a href="https://en.wikipedia.org/wiki/Password" class="">
+                  <p class="text-center">Forgotten your password?</p>
+                </a>
+              </div>
+              <div class="d-flex-centre">
+                <a href="https://en.wikipedia.org/wiki/SignIn" class="">
+                    <span class="i-gplus icon"></span>
+                    <span class="text">LOGIN IN</span>
+                </a>
+              </div>
+
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={this.props.closeModal}>Close</Button>
+              <Button bsStyle="primary" onClick={fun => console.log("here")}>Save changes</Button>
+            </Modal.Footer>
+
+          </Modal.Dialog>
+        </div>
     );
 
     if(this.props.showModal){
@@ -31,3 +79,4 @@ class SignInModalContainer extends React.Component {
   }
 }
 export default SignInModalContainer;
+

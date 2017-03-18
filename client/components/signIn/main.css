@@ -1,0 +1,37 @@
+
+.col-centered{
+float: none;
+margin: 0 auto;
+}
+
+.d-flex-centre {
+  display: flex;
+  justify-content: center;
+}
+
+.left, .right {
+    padding: 20px;   
+}
+
+.form-control{
+/*	width: 50%;*/
+}
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+      width: 400px; /* either % (e.g. 60%) or px (400px) */
+			display: inline-block;
+			text-align: left;
+			vertical-align: middle;
+    }
+    .modal {
+  		text-align: center;
+      !opacity: 1;
+		}
+    .modal:before {
+	    display: inline-block;
+	    vertical-align: middle;
+	    content: " ";
+	    height: 100%;
+  }
+}
