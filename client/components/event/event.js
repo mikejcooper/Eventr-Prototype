@@ -10,7 +10,7 @@ class Event extends React.Component {
   render() {
   	let d = this.props.data;
     return (
-      <div class="box">
+      <div class="box">x
       	<div>
       		<h4>{d.title}</h4>
       		<h6>{d.subTitle}</h6>
