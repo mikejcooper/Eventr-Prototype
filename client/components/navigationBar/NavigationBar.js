@@ -25,7 +25,7 @@ class NavigationBar extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  openSignInModal(){
+  openSignInModal() {
     this.props.dispatch(openSignInModal());
   }
 
@@ -64,7 +64,17 @@ class NavigationBar extends React.Component {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-          <a class="navbar-brand" href="/#"><img src="http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills"></img></a>
+            <a class="navbar-brand" href="/#"><img src="http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills"></img></a>
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control search-Bar"  placeholder="Search" name="q"></input>
+                  <div class="input-group-btn">
+                      <button class="btn btn-default search-Btn" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
+                  </div>
+              </div>
+            </form>
           </div>
           <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">

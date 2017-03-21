@@ -3,7 +3,6 @@ import webpack from 'webpack';
 
 
 
-
 export default {
   devtools: 'eval-source-map',
   entry: [
@@ -32,7 +31,17 @@ export default {
       { 
         test: /\.css$/, 
         loader: "style-loader!css-loader" 
-      }
+      }, {
+        test: /\.js|.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+      },{
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          loaders: [
+              'url?limit=8192',
+              'img'
+          ]
+      },
     ]
   },
   resolve: {
