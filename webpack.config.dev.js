@@ -31,17 +31,19 @@ export default {
       { 
         test: /\.css$/, 
         loader: "style-loader!css-loader" 
-      }, {
+      }, 
+      {
         test: /\.js|.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-      },{
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          loaders: [
-              'url?limit=8192',
-              'img'
-          ]
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack'
+        ]
+      }
     ]
   },
   resolve: {
@@ -49,6 +51,27 @@ export default {
     modulesDirectories: [
           'node_modules'
         ]  
+  }, 
+  imageWebpackLoader: {
+    mozjpeg: {
+      quality: 65, 
+      progressive: true, 
+      interlaced: true
+    },
+    pngquant:{
+      quality: "65-90",
+      speed: 4
+    },
+    svgo:{
+      plugins: [
+        {
+          removeViewBox: false
+        },
+        {
+          removeEmptyAttrs: false
+        }
+      ]
+    }
   }
 }
 

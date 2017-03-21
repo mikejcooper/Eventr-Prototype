@@ -17,6 +17,8 @@ class Event extends React.Component {
       	</div>
       	<div>
       		<div>
+          <img src={require("../../images/nature1.png")}/>
+
       			people/rating/price
       		</div>
       		<div>
