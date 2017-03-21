@@ -1,0 +1,6 @@
+.box {
+	width:250px;
+	height:250px;
+	display: inline-block;
+	background-image: url("../../images/nature1.png");
+}
