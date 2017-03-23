@@ -1,6 +1,82 @@
-.box {
-	width:250px;
-	height:250px;
-	display: inline-block;
-	/*background-image: url("../../images/nature1.png");*/
+
+
+.title {
+	pointer-events:none;
+	top: 0;
+	padding-left: 15px;
+	padding-top: 15px;
+	color: #FFFFFF;
+	position: absolute;
+	z-index: 1
 }
+
+.event {
+	position: relative;
+}
+
+.footer {
+	pointer-events:none;
+	width: inherit;
+	position: absolute;
+    bottom: 6%;
+}
+
+.image {
+	z-index: 0;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	display: inline-block;
+}
+
+.darken {
+	filter: brightness(70%);
+}
+
+.personIcon {
+	width:25px;
+	height:25px;
+	filter: invert(100%);
+}
+
+.button-tags {
+	pointer-events:auto;
+	border-radius: 40px;
+	color: #FFFFFF;
+	margin-left: 5px;
+	margin-right: 5px;
+	border: 2px solid #FFFFFF;
+	background-color: Transparent;
+	border-color: #FFFFFF;
+	font-family: 'Proxima Nova', helvetica, arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	border-width: 1px;
+}
+
+.button-tags:hover {
+	color: #000000;
+	background-color: #FFFFFF;
+} 
+
+.tags {
+	width: inherit;
+	text-align:center;
+}
+
+.info {
+	width: inherit;
+	margin-bottom: 5px;
+}
+
+.venue-size {
+	float:left;
+	width: 80%;
+	padding-left: 10px;
+}
+
+.price {
+	width: 20%;
+	float:left;
+	color: #FFFFFF;
+}
+

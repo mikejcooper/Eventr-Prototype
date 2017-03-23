@@ -1,0 +1,90 @@
+.contentContainer {
+	width: 700px;
+    height: 350px;
+    border: 1px black solid;
+    overflow: hidden;
+}
+
+.wrapper {
+	transform: translate3d(0, 0, 0);
+	transition: transform .5s ease-in-out;
+}
+
+.block {
+	width: 350px;
+	height: 350px;
+	float: left;
+}
+
+.tab {
+	height: 2px;
+	width: 7px;
+}
+
+.lit {
+	background-color: #FF00FF;
+}
+
+.black {
+	background-color: #000000;
+}
+
+.green {
+	background-color: #00FF00;
+}
+
+.yellow {
+	background-color: #FFFF00;
+}
+
+.pink {
+	background-color: #0000FF;
+}
+
+.event {
+	float: left;
+}
+
+#navLinks {
+    text-align: center;
+    width: 550px;
+}
+    #navLinks ul {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        margin-top: 6px;
+    }
+        #navLinks ul li {
+            float: left;
+            text-align: center;
+            margin: 10px;
+            list-style: none;
+            cursor: pointer;
+            background-color: #CCCCCC;
+            padding: 5px;
+            border-radius: 50%;
+            border: black 5px solid;
+        }
+            #navLinks ul li:hover {
+                background-color: #FFFF00;
+            }
+            #navLinks ul li.active {
+                background-color: #333333;
+                color: #FFFFFF;
+                outline-width: 7px;
+            }
+                #navLinks ul li.active:hover {
+                    background-color: #484848;
+                    color: #FFFFFF;
+                }
+
+#navLinks ul li.active {
+    background-color: #333333;
+    color: #FFFFFF;
+    outline-width: 7px;
+}
+#navLinks ul li.active:hover {
+    background-color: #484848;
+    color: #FFFFFF;
+}
