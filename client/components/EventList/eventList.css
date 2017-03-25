@@ -1,8 +1,40 @@
 .contentContainer {
 	width: 700px;
     height: 350px;
-    border: 1px black solid;
+    /*border: 1px black solid;*/
     overflow: hidden;
+}
+
+.eventList {
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.forward-backward {
+    float: left;
+    position: relative;
+}
+
+.nav-image-back {
+    width:25px;
+    height:25px;
+    right: 15px; 
+    top: 12px;
+    z-index: 5;
+    position: absolute;
+    pointer-events:none;
+}
+
+.nav-image-forward {
+    width:25px;
+    height:25px;
+    right: 10px; 
+    top: 12px;
+    z-index: 5;
+    position: absolute;
+    pointer-events:none;
 }
 
 .wrapper {
@@ -11,34 +43,59 @@
 }
 
 .block {
-	width: 350px;
-	height: 350px;
+	width: 50px;
+	height: 50px;
 	float: left;
 }
 
 .tab {
-	height: 2px;
-	width: 7px;
+	height: 7px;
+	width: 22px;
+    border:none;
+    margin-right: 3px;
+    margin-left: 3px;
+    float: left;
+}
+
+.line {
+    border: 1px black solid;
+    height: 0px;
+    width: 100%;
+}
+
+.tabs {
+    display: inline-block;
+    float: left;
+    display: inline-block;
+    margin-top: 20px;
+
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 4px;
+    border: 2px black solid;
+    z-index: 4;
+}
+
+
+.navigation {
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+}
+
+.logo {
+    height: 50px;
+    float: left;
 }
 
 .lit {
-	background-color: #FF00FF;
-}
-
-.black {
 	background-color: #000000;
-}
-
-.green {
-	background-color: #00FF00;
-}
-
-.yellow {
-	background-color: #FFFF00;
-}
-
-.pink {
-	background-color: #0000FF;
 }
 
 .event {

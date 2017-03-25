@@ -6,3 +6,7 @@
 .label-default{
     background-color: red;
 }
+
+.eventList {
+	position: relative;
+}

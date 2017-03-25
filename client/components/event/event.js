@@ -40,11 +40,10 @@ class Event extends React.Component {
   renderOnHover(data) {
       return (
             <div class="footer">
-              <div class="info clearfix">
-                <div class="venue-size">{this.renderVenueSize(data.size)}</div>
-                <div class="price">£{data.price}</div>
-              </div>
               <div class="tags">{this.renderTags(data.tags)}</div>
+              <div class="info">
+                <div class="venue-size">{this.renderVenueSize(data.size)}</div>
+              </div>
             </div>
         )
   }
@@ -54,12 +53,11 @@ class Event extends React.Component {
     let cl = this.state.hover ? "image darken" : "image";
     let src = require("../../images/event1.jpg");
     let size = this.props.size ? this.props.size : 350;
-    let margin = 8;
+    let margin = 12;
     let style = {
       width: size - 2 * margin,
       height: size - 2 * margin,
       margin: margin
-
     }
     return (
       <div class="event" style={style} onMouseEnter={this.handleHoverOn} onMouseLeave={this.handleHoverOff}>

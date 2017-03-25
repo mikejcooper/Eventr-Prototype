@@ -18,10 +18,17 @@ class Home extends React.Component {
     events[7] = {title: 'Super awesome Event', subTitle: 'nkjcn', imageURL: '../../images/event1.jpg', size: 4, price: 1.95, rating: 4, tags: ['evfs','vsfv','cfvdfvool','vdsfv']};
     events[8] = {title: 'Super awesome Event', subTitle: 'nkjcn', imageURL: '../../images/event1.jpg', size: 4, price: 1.95, rating: 4, tags: ['evfs','vsfv','cfvdfvool','vdsfv']};
     events[9] = {title: 'Super awesome Event', subTitle: 'nkjcn', imageURL: '../../images/event1.jpg', size: 4, price: 1.95, rating: 4, tags: ['evfs','vsfv','cfvdfvool','vdsfv']};
+    
+    const containerStyle = {
+      marginTop: "200px", // Allow children to render without hitting nav bar
+    };
 
     return (
-      <div>
-       <EventList events ={events} size={350}/>
+      <div style={containerStyle}>
+       <EventList events ={events} class="eventList" size={350}/>
+       <EventList events ={events} class="eventList" size={350}/>
+       <EventList events ={events} class="eventList" size={350}/>
+       <EventList events ={events} class="eventList" size={350}/>
        <SignInModal/>
         
       </div>
