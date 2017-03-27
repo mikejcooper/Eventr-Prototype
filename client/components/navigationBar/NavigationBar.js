@@ -4,7 +4,6 @@ import { openSignInModal } from '../../actions/modalActions';
 import {searchWithSearchBar} from  '../../actions/searchBarActions';
 import { connect } from "react-redux";
 import css from './NavigationBar.css';
-import SearchBar from '../SearchBar/SearchBar';
 
 
 // Maps dispatcher to props

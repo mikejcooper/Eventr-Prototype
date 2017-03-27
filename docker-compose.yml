@@ -2,43 +2,18 @@
 version: '2'
 
 services:
-  # db:
-  #   image: mongo
-  #   ports:
-  #      - "27017:27017"
-  web:
+  latest:
+    # image: mikejcooper/web-technologies
     build: .
     command: npm run dev
     ports:
       - '3000:3000'
-    # links:
-    #   - db
     volumes:
       - '.:/usr/src/app'
       - 'api-deps:/usr/src/app/node_modules'
 volumes: 
   api-deps:
 
-# ----------------------Production ---------------------------------
-
-# version: '2'
-
-# services:
-#   db:
-#     image: mongo
-#     ports:
-#        - "27017:27017"
-#   web:
-#     build: .
-#     command: npm run prod
-#     ports:
-#       - '8888:8888'
-#     links:
-#       - db
-#     volumes:
-#       - '.:/usr/src/app'
-# volumes: 
-#   api-deps:
 
 
 
