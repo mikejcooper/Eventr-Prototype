@@ -1,0 +1,23 @@
+.my-container-search-bar {
+	position: relative;
+  width: 100%;
+  height: 230px;
+  margin-top: -10px;
+  background-color: #AAAAAA;
+  z-index: 9;
+}
+
+.search-input {
+	background-color: #AAAAFF;
+	height: 100px;
+	width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	float: left;
+}
+
+.search-tag {
+	float: left;
+}
