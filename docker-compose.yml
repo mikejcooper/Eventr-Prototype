@@ -2,7 +2,7 @@
 version: '2'
 
 services:
-  latest:
+  web:
     # image: mikejcooper/web-technologies
     build: .
     command: npm run dev

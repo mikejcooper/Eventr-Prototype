@@ -21,7 +21,7 @@ class Event extends React.Component {
   //This is done temporarily, when we get our image server running this code will deprecate
   getImage(name){
     console.log(name);
-    switch(name.i%3){
+    switch(name%3){
       case 0:
         return "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/13892039_10154522534679359_9217082776467699263_n.jpg?oh=b24958607434868d5ee1e17bf1392e0e&oe=595D242A";
       case 1:
