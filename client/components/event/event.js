@@ -20,15 +20,16 @@ class Event extends React.Component {
 
   //This is done temporarily, when we get our image server running this code will deprecate
   getImage(name){
-    switch(name%3){
+    console.log(name);
+    switch(name.i%3){
       case 0:
-        return require("../../images/event1.jpg");
+        return "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/13892039_10154522534679359_9217082776467699263_n.jpg?oh=b24958607434868d5ee1e17bf1392e0e&oe=595D242A";
       case 1:
-        return require("../../images/club.jpg");
+        return "https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/17547021_10155073976014360_7420708260605825136_o.jpg?oh=572b28b1f7b3171c9f996bd97ca30548&oe=596AD605";
       case 2:
-        return require("../../images/concert.jpg");
+        return "https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/12140938_1075589775819831_2018018124720908281_o.jpg?oh=dc31c20138360f10766c1694c9004d3f&oe=59662012";
       default:
-        return require("../../images/concert.jpg");
+        return "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/13892039_10154522534679359_9217082776467699263_n.jpg?oh=b24958607434868d5ee1e17bf1392e0e&oe=595D242A";
     }
   }
 
@@ -46,7 +47,7 @@ class Event extends React.Component {
   renderVenueSize(size) {
     var lis = []
     for (var i=0; i< size; i++) {
-        lis.push(<img key={i} class="personIcon" src={require("../../images/personIcon.png")} />)
+        lis.push(<img key={i} class="personIcon" src="https://openclipart.org/download/202776/pawn.svg" />)
     }
     return (lis)
   }

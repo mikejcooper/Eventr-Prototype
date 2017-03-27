@@ -117,11 +117,11 @@ class EventList extends React.Component {
           <div class="navigation">
             {maxNumberOfElements > 1 && this.renderTabs(events.length)}
             <div class="forward-backward">
-              <img class="nav-image-back" src={require("../../images/left-arrow2.png")} />
+
               <div class="circle" value="<" onClick={()=>{this.setNextIndex(numberOfTabs,function (a){return a - 1})}}/>
             </div>
             <div class="forward-backward">
-              <img class="nav-image-forward" src={require("../../images/right-arrow2.png")} />
+              
               <div class="circle" value=">" onClick={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
             </div>
           </div>
@@ -137,3 +137,7 @@ class EventList extends React.Component {
 }
 
 export default EventList
+
+//<img class="nav-image-forward" src={require("../../images/right-arrow2.png")} />
+
+//              // <img class="nav-image-back" src={require("../../images/left-arrow2.png")} />

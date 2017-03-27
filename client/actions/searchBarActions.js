@@ -29,13 +29,13 @@ export function searchWithSearchBar(tags){
 	return function(dispatch) {
 		let events = [];
 		for (var i = 0; i < 10; i++) {
-			events[i] = {name: 'name1', subTitle: 'subTitle', imageURL: '../../images/event1.jpg', size: 3, price: 3.95, rating: 4, tags: ['super','awesome','cool','music']};
+			events[i] = {name: 'name1', id: {i}, subTitle: 'subTitle', imageURL: '../../images/event1.jpg', size: 3, price: 3.95, rating: 4, tags: ['super','awesome','cool','music']};
 		}
 	    let eventslist = [];
 	    for (var i = 0; i < 6; i++) {
 			eventslist[i] = events;
 		}
-		axios.get("http://192.168.0.37:4000/api/events/search/all")
+		axios.get("http://localhost:4000/api/events/search/all")
 		.then((response) => {
 			let lists = splitEvents(response.data,10);
 			console.log("fetching events");
