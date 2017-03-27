@@ -8,7 +8,6 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-	console.log(state)
   switch(action.type) {
     case OPEN_SIGN_IN_MODAL: 
     	state = {...state, signInBool: true}

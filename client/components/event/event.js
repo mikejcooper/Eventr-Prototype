@@ -18,6 +18,20 @@ class Event extends React.Component {
         this.setState({hover: false});
   }
 
+  //This is done temporarily, when we get our image server running this code will deprecate
+  getImage(name){
+    switch(name%3){
+      case 0:
+        return require("../../images/event1.jpg");
+      case 1:
+        return require("../../images/club.jpg");
+      case 2:
+        return require("../../images/concert.jpg");
+      default:
+        return require("../../images/concert.jpg");
+    }
+  }
+
 
   renderTags(tags) {
       var lis = [];
@@ -51,7 +65,7 @@ class Event extends React.Component {
   render() {
   	let d = this.props.data;
     let cl = this.state.hover ? "image darken" : "image";
-    let src = require("../../images/event1.jpg");
+    let src = this.getImage(d.id);
     let size = this.props.size ? this.props.size : 350;
     let margin = 12;
     let style = {
@@ -63,10 +77,9 @@ class Event extends React.Component {
       <div class="event" style={style} onMouseEnter={this.handleHoverOn} onMouseLeave={this.handleHoverOff}>
         <img class={cl} src={src} />
         <div class="title">
-          <h5>{d.title}</h5>
-          <p>{d.subTitle}</p>
+          <h5>{d.name}</h5>
         </div>
-        {this.state.hover && this.renderOnHover(d)}
+         {this.state.hover && this.renderOnHover(d)}
       </div>
     );
   }

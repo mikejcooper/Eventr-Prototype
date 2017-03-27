@@ -11,7 +11,6 @@ class EventList extends React.Component {
       this.setNextIndex = this.setNextIndex.bind(this);
       this.getPos = this.getPos.bind(this);
       this.handleTabClick = this.handleTabClick.bind(this);
-      // this.onresize = this.onresize.bind(this);
   }
 
   setNextIndex(numberOfTabs,func){
@@ -46,8 +45,10 @@ class EventList extends React.Component {
 
   onresize() {
     var items = document.querySelectorAll(".event");
+    document.qu
     let widthComponent = this.outerWidth(items[0]);
     let maxElementsDisplayed = this.getMaxNumberOfElements(widthComponent);
+    maxElementsDisplayed = maxElementsDisplayed > this.props.events.length ? this.props.events.length : maxElementsDisplayed;
     this.setState({elementsDisplayed: maxElementsDisplayed > 0 ? maxElementsDisplayed : 1 });
     if(this.state.index > maxElementsDisplayed - 1){
       this.setState({index: maxElementsDisplayed });

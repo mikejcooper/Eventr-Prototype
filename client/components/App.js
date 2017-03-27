@@ -29,7 +29,7 @@ class App extends React.Component {
     };
 
     return (
-      <div class="container" style={containerStyle} >
+      <div class="" style={containerStyle} >
           <div class="row">
              <div class="col-lg-12">
             <NavigationBar/>

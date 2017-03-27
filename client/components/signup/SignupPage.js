@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { userSignupRequest } from '../../actions/signupActions';
 import { addFlashMessage } from '../../actions/flashMessagesActions';
 
+
 class SignupPage extends React.Component {
   render() {
     const { userSignupRequest, addFlashMessage } = this.props;

@@ -7,7 +7,7 @@ const initialState = {
 			text: 'text'
 		}
 	],   
-	events : [{title: 'Super awesome Event', subTitle: 'haha', imageURL: '../../images/event1.jpg', size: 2, price: 2.00, rating: 4, tags: ['way','too','comp','ddsmwmc']}]
+	events : []
 };
 
 export default (state = initialState, action = {}) => {
