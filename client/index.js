@@ -11,6 +11,11 @@ import routes from './routes';
 
 const middleware = applyMiddleware(thunk)
 
+const initialState = { 
+  tags: [{id:123, text:'hello'}] 
+};
+
+
 const store = createStore(
   combineReducers,
   compose(

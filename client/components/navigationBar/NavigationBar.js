@@ -1,8 +1,10 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import { openSignInModal } from '../../actions/modalActions';
+import {searchWithSearchBar} from  '../../actions/searchBarActions';
 import { connect } from "react-redux";
 import css from './NavigationBar.css';
+import SearchBar from '../SearchBar/SearchBar';
 
 
 // Maps dispatcher to props
@@ -15,6 +17,7 @@ class NavigationBar extends React.Component {
       ScrollState: 1,
     };
     this.handleScroll = this.handleScroll.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -32,6 +35,13 @@ class NavigationBar extends React.Component {
   toggleCollapse() {
     const collapsed = !this.state.collapsed;
     this.setState({collapsed});
+  }
+
+  onSubmit() {
+    console.log("onsubmit called");
+    console.log(this.refs.searchInput.value);
+    let tags = this.refs.searchInput.value.split(',');
+    this.props.dispatch(searchWithSearchBar(tags));
   }
 
   handleScroll(event) {
@@ -72,14 +82,10 @@ class NavigationBar extends React.Component {
           <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li activeClassName="active" onlyActiveOnIndex={true}>
-                <form class="navbar-form" role="search">
-                  <div class="input-group">
-                    <input type="text" class="form-control search-Bar"  placeholder="Search" name="q"></input>
-                    <div class="input-group-btn">
-                        <button class="btn btn-default search-Btn" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
-                    </div>
-                  </div>
-                </form>
+                <div class="search-bar-container">
+                    <input type="text" ref="searchInput" class="form-control search-Bar my-search-input"  placeholder="Search" name="q"></input>
+                    <button class="btn btn-default search-Btn" type="submit" onClick={this.onSubmit}><i class="glyphicon glyphicon-search" ></i></button>
+                </div>
               </li>
               <li activeClassName="active" onlyActiveOnIndex={true}>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>

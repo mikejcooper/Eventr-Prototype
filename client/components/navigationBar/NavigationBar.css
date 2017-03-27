@@ -47,14 +47,30 @@
   cursor: pointer;
   outline: none;
   border-left: none;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
   -webkit-border-top-right-radius: 10px;
   -webkit-border-bottom-right-radius: 10px;
   -moz-border-radius-topright: 10px;
   -moz-border-radius-bottomright: 10px;
   border-top-right-radius: 10px;
+  float: left;
+  width: 10%;
 }
 
 .search-Btn:hover {
     background-color: #F3BF00; /* Green */
     color: white;
+}
+
+.search-bar-container {
+  width: 500px;
+  margin-top: 3px;
+}
+
+.my-search-input {
+  float: left;
+  width: 90%;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
 }
