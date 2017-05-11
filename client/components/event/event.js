@@ -23,7 +23,7 @@ class Event extends React.Component {
     console.log(name);
     switch(name%3){
       case 0:
-        return "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/13892039_10154522534679359_9217082776467699263_n.jpg?oh=b24958607434868d5ee1e17bf1392e0e&oe=595D242A";
+        return "http://localhost:2000/images/club.jpg";
       case 1:
         return "https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/17547021_10155073976014360_7420708260605825136_o.jpg?oh=572b28b1f7b3171c9f996bd97ca30548&oe=596AD605";
       case 2:
