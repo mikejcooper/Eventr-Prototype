@@ -1,18 +1,30 @@
 import React from 'react';
 import css from './SearchTag.css';
+import { connect } from "react-redux";
+import {deleteTag} from '../../../actions/searchBarActions';
 
-
-class SearchBar extends React.Component {
+@connect((store) => {
+  return {
+    
+  };
+})
+class SearchTag extends React.Component {
   constructor(){
       super();
+      this.removeTag.bind(this);
+  }
+
+  removeTag(){
+    console.log("remove tag: " + this.props.value.text);
+    this.props.dispatch(deleteTag(this.props.value.text));
   }
 
   render() {
     return (
-      <div>
+      <div class="wrapper">
         <div class="my-left">
-          <button id="1" class="delete-button">X</button>
-          <div id="1" class="tag">{this.props.value}</div>
+          <button id={this.props.value.id} class="delete-button" onClick={() => this.removeTag()}>X</button>
+          <div id={this.props.value.id} class="tag">{this.props.value.text}</div>
         </div>
         <span class="glyphicon glyphicon-plus plus"></span>
       </div>
@@ -20,4 +32,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar
+export default SearchTag

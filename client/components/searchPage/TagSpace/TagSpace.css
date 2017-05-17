@@ -3,3 +3,32 @@
 	height: 170px;
 	background-color: #A00F0A;
 }
+
+.control-left {
+	float: left;
+	width: 8%;
+	height: inherit;
+	background-color: #FFFFFF;
+}
+
+.content-space {
+	position: relative;
+	float: left;
+	width: 84%;
+	height: inherit;
+	background-color: #FFFFFF;
+	/*align-content: center;
+	-webkit-align-content: center;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.control-right {
+	float: left;
+	width: 8%;
+	height: inherit;
+	background-color: #FFFFFF;
+}

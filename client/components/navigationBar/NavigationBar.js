@@ -71,9 +71,8 @@ class NavigationBar extends React.Component {
     return (
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
         <div class="container">
-          <div class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} >
-            
-          </div>
+          <div class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} />
+        
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
               <span class="sr-only">Toggle navigation</span>
@@ -81,7 +80,6 @@ class NavigationBar extends React.Component {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-           
           </div>
           <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -104,14 +102,15 @@ class NavigationBar extends React.Component {
 
 export default NavigationBar
 
+//  <Link class="navbar-header fixed my-button search-icon" onClick={this.toggleCollapse.bind(this)} to="/search"></Link>
+//
+// <div class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} >
 
 // <div class="search-bar-container">
 //     <input type="text" ref="searchInput" class="form-control search-Bar my-search-input"  placeholder="Search" name="q"></input>
 //     <button class="btn btn-default search-Btn" type="submit" onClick={this.onSubmit}><i class="glyphicon glyphicon-search" ></i></button>
 // </div>
 
-// <Link class="my-button" onClick={this.toggleCollapse.bind(this)} to="/search"></Link>
-
 // <a class="navbar-brand inverted" href="/#"><img src={require("../../images/logo.png")} alt="Dispute Bills"></img></a>
 
-//<img class="search-icon"  onClick={this.handleSearchClick} src={require("../../images/search-icon.png")}/>
+// <img class="search-icon"  onClick={this.handleSearchClick} src={require("../../images/search-icon.png")}/>

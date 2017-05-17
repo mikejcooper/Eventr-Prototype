@@ -3,7 +3,7 @@ import {ADD_TAG_SEARCH_BAR, DELETE_TAG_SEARCH_BAR, FETCH_EVENTS_FULFILLED,FETCH_
 
 export function addTag(id, text) {
   return {
-    type: 'ADD_TAG_SEARCH_BAR',
+    type: ADD_TAG_SEARCH_BAR,
     payload: {
       id,
       text,
@@ -12,38 +12,47 @@ export function addTag(id, text) {
 }
 
 export function deleteTag(id) {
-  return { type: 'DELETE_TAG_SEARCH_BAR', payload: id}
-}
-
-function splitEvents(events,size) {
-	let lists = [];
-	var size = 10;
-	for (var i=0; i<events.length; i+=size) {
-	    var smallarray = events.slice(i,i+size);
-	    lists.push(smallarray);
-	}
-	return lists;
+  return { type: DELETE_TAG_SEARCH_BAR, payload: id}
 }
 
 export function searchWithSearchBar(tags){
 	return function(dispatch) {
 		let events = [];
-		for (var i = 0; i < 10; i++) {
+		for (var i = 0; i < 33; i++) {
 			events[i] = {name: 'name1', id: {i}, subTitle: 'subTitle', imageURL: '../../images/event1.jpg', size: 3, price: 3.95, rating: 4, tags: ['super','awesome','cool','music']};
-		}
-	    let eventslist = [];
-	    for (var i = 0; i < 6; i++) {
-			eventslist[i] = events;
 		}
 		axios.get("http://localhost:4000/api/events/search/all")
 		.then((response) => {
-			let lists = splitEvents(response.data,10);
+			// let fetched = splitEvents(response.data,10);
 			console.log("fetching events");
-			dispatch({type: 'FETCH_EVENTS_FULFILLED', payload: lists});
+			dispatch({type: FETCH_EVENTS_FULFILLED, payload: response.data});
 		})
 		.catch((err) => {
-			dispatch({type: 'FETCH_EVENTS_FULFILLED', payload: eventslist});
+			dispatch({type: FETCH_EVENTS_FULFILLED, payload: events});
 			console.log(err);
 		});
 	}
 }
+
+// export function fetchSuggestTags(){
+// 	return function(dispatch) {
+// 		let events = [];
+// 		for (var i = 0; i < 10; i++) {
+// 			events[i] = {name: 'name1', id: {i}, subTitle: 'subTitle', imageURL: '../../images/event1.jpg', size: 3, price: 3.95, rating: 4, tags: ['super','awesome','cool','music']};
+// 		}
+// 	    let eventslist = [];
+// 	    for (var i = 0; i < 6; i++) {
+// 			eventslist[i] = events;
+// 		}
+// 		axios.get("http://localhost:4000/api/tags/search/all")
+// 		.then((response) => {
+// 			let lists = splitEvents(response.data,10);
+// 			console.log("fetching events");
+// 			dispatch({type: 'FETCH_EVENTS_FULFILLED', payload: lists});
+// 		})
+// 		.catch((err) => {
+// 			dispatch({type: 'FETCH_EVENTS_FULFILLED', payload: eventslist});
+// 			console.log(err);
+// 		});
+// 	}
+// }

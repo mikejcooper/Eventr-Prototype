@@ -53,6 +53,7 @@
     "bootstrap.native": "^2.0.6",
     "classnames": "^2.2.5",
     "express": "^4.14.1",
+    "flexbox": "0.0.3",
     "jsonwebtoken": "^7.1.7",
     "jwt-decode": "^2.1.0",
     "knex": "^0.11.7",
