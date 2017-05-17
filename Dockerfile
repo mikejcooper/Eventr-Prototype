@@ -1,6 +1,6 @@
 # -----------------------Development-----------------------
 
-  FROM node:7.4.0
+  FROM node:latest
 
   WORKDIR /usr/src/app/
 

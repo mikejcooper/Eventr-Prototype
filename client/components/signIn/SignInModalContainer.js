@@ -3,8 +3,15 @@ import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import css from './main.css'
 import TextFieldGroup from '../common/TextFieldGroup';
+import FacebookSocialLogin from './FacebookSocialLogin'
+import GoogleSocialLogin from './GoogleSocialLogin'
 
 
+                    // <span class="i-facebook icon"></span>
+                    // <span class="text">SIGN IN</span>
+
+                    // <span class="i-gplus icon"></span>
+                    // <span class="text">SIGN IN</span>
 
 class SignInModalContainer extends React.Component { 
 
@@ -19,19 +26,12 @@ class SignInModalContainer extends React.Component {
                 <p class="text-center">We've been waiting to show you <br></br> all the new events we found.</p>
               </div>
 
-
               <div class="row d-flex-centre">
                 <div class="left">
-                  <a href="https://en.wikipedia.org/wiki/Facebook" class="">
-                    <span class="i-facebook icon"></span>
-                    <span class="text">SIGN IN</span>
-                  </a>
+                    <FacebookSocialLogin/>
                 </div>
                 <div class="right">
-                  <a href="https://en.wikipedia.org/wiki/Google" class="">
-                    <span class="i-gplus icon"></span>
-                    <span class="text">SIGN IN</span>
-                  </a>
+                    <GoogleSocialLogin  />
                 </div>
               </div>
               <div class="d-flex-centre">
