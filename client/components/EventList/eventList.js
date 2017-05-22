@@ -112,16 +112,17 @@ class EventList extends React.Component {
     return (
       <div style={styleEventList} class="eventList">
         <div>
-          <div class="logo">
-          </div>
+
+          <div class="logo"/>
           <div class="navigation">
+
             {maxNumberOfElements > 1 && this.renderTabs(events.length)}
             <div class="forward-backward">
-
+              <img class="nav-image-back" src="http://localhost:2000/images/left-arrow2.png"/>
               <div class="circle" value="<" onClick={()=>{this.setNextIndex(numberOfTabs,function (a){return a - 1})}}/>
             </div>
             <div class="forward-backward">
-              
+              <img class="nav-image-forward" src="http://localhost:2000/images/right-arrow2.png"/>
               <div class="circle" value=">" onClick={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
             </div>
           </div>

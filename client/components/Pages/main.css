@@ -10,3 +10,15 @@
 .eventList {
 	position: relative;
 }
+
+.my-image{
+	position: relative;
+	width: inherit;
+	height: 350px;
+	background-image: url("http://localhost:2000/images/svg_party.png");
+}
+
+.filler {
+	width: inherit;
+	height: 200px;
+}

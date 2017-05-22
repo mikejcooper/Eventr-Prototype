@@ -3,6 +3,7 @@ import NavigationBar from './navigationBar/NavigationBar';
 import FlashMessagesList from './flash/FlashMessagesList';
 import SignInModal from './signIn/SignInModal';
 import { connect } from "react-redux";
+import css from './App.css';
 
 
 @connect((store) => {
@@ -29,7 +30,7 @@ class App extends React.Component {
     };
 
     return (
-      <div class="" style={containerStyle} >
+      <div class="background" style={containerStyle} >
           <div class="row">
              <div class="col-lg-12">
             <NavigationBar/>
