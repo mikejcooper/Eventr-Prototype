@@ -3,7 +3,6 @@ import NavigationBar from './navigationBar/NavigationBar';
 import FlashMessagesList from './flash/FlashMessagesList';
 import SignInModal from './signIn/SignInModal';
 import { connect } from "react-redux";
-import css from './App.css';
 
 
 @connect((store) => {
