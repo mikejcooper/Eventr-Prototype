@@ -1,21 +1,31 @@
 import React from 'react';
 import css from './event.css';
+import { openEventModal } from '../../actions/modalActions';
+import { connect } from "react-redux";
 
 
+// Maps dispatcher to props
+@connect()
 class Event extends React.Component {
   constructor(){
       super();
       this.handleHoverOn = this.handleHoverOn.bind(this);
       this.handleHoverOff = this.handleHoverOff.bind(this);
+      this.handleImgClick = this.handleImgClick.bind(this);
       this.state = {hover: false};
   }
 
   handleHoverOn(){
-        this.setState({hover: true});
+      this.setState({hover: true});
   }
 
   handleHoverOff(){
-        this.setState({hover: false});
+      this.setState({hover: false});
+  }
+
+  handleImgClick(){
+      console.log("click")
+      this.props.dispatch(openEventModal());
   }
 
   renderTags(tags) {
@@ -59,7 +69,7 @@ class Event extends React.Component {
     }
     return (
       <div class="event" style={style} onMouseEnter={this.handleHoverOn} onMouseLeave={this.handleHoverOff}>
-        <img class={cl} src={d.picture_url} />
+        <img class={cl} onClick={this.handleImgClick} src={d.picture_url} />
         <div class="title">
           <h5>{d.name}</h5>
         </div>

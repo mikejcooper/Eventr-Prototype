@@ -2,12 +2,14 @@ import React from 'react';
 import NavigationBar from './navigationBar/NavigationBar';
 import FlashMessagesList from './flash/FlashMessagesList';
 import SignInModal from './signIn/SignInModal';
+import EventModal from './event/EventModal';
 import { connect } from "react-redux";
 
 
 @connect((store) => {
   return {
-    isModalOpen: store.modal.isModalOpen
+    isSignInModalOpen: store.modal.isSignInModalOpen,
+    isEventModalOpen: store.modal.isEventModalOpen
   };
 })
 class App extends React.Component {
@@ -17,7 +19,7 @@ class App extends React.Component {
 
   render() {
     var opacityVal = 1
-    if(this.props.isModalOpen){
+    if(this.props.isSignInModalOpen || this.props.isEventModalOpen){
       opacityVal = 0.6
     }
     
@@ -35,6 +37,7 @@ class App extends React.Component {
             <NavigationBar/>
             <FlashMessagesList />
             <SignInModal/>
+            <EventModal/>
             <div style={fadeStyle}>
               {this.props.children}
             </div>
