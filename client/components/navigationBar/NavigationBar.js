@@ -71,7 +71,7 @@ class NavigationBar extends React.Component {
     return (
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
         <div class="container">
-        <div class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} />
+        <img class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} src="http://localhost:2000/images/search-icon.png"/>              
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
               <span class="sr-only">Toggle navigation</span>
