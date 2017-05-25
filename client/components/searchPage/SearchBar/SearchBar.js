@@ -18,22 +18,19 @@ class SearchBar extends React.Component {
       this.onSearchButtonClick.bind(this);
   }
 
-  // onclick() {
-  //   this.props.dispatch(addTag(this.props.tags.length,"this.props.tags.length"));
-  //   console.log("check if we get tags here");
-  //   console.log(this.state);
-  // }
-
   addTag(text) {
     this.props.dispatch(addTag(this.props.tags.length,text));
   }
 
   search() {
-    this.props.dispatch(searchWithSearchBar(this.props.tags));
+    let searchbarContents = new Object();
+    searchbarContents.text = this.refs.textInput.value;
+    searchbarContents.id = this.props.tags.length;
+    this.props.dispatch(searchWithSearchBar(this.props.tags.concat(searchbarContents)));
   }
 
   onSearchButtonClick() {
-    //send request to api
+    this.search();
   }
 
   renderTags(){
@@ -53,9 +50,13 @@ class SearchBar extends React.Component {
     let searchBar = this.refs.textInput;
     let text = searchBar.value;
     if((event.keyCode === 13 || event.keyCode === 32)&& !this.isStringEmpty(text)){
+      console.log("before");
+      console.log(this.props.tags);
       this.addTag(text);
-      this.refs.textInput.value = "";
+      console.log("after");
+      console.log(this.props.tags);
       this.search();
+      this.refs.textInput.value = "";
     }
   }
 

@@ -27,10 +27,11 @@
 	height: inherit;
 	position: absolute;
 	display: inline-block;
+	filter: brightness(80%);
 }
 
 .darken {
-	filter: brightness(70%);
+	filter: brightness(60%);
 }
 
 .personIcon {
