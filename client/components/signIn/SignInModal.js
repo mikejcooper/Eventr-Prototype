@@ -22,7 +22,6 @@ class SignInModal extends React.Component {
 
   render() {
     this.state.showModal = this.props.modalSignIn
-    console.log(this.props.modalSignIn);
 
     return(
       <SignInModalContainer showModal = {this.state.showModal} closeModal = { this.closeModal }/>

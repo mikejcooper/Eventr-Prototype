@@ -71,7 +71,7 @@ class NavigationBar extends React.Component {
     return (
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
         <div class="container">
-        <div class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} />
+        <img class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} src="http://localhost:2000/images/search-icon.png"/>              
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
               <span class="sr-only">Toggle navigation</span>
@@ -79,6 +79,7 @@ class NavigationBar extends React.Component {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand" href="/#"><img src="http://localhost:2000/images/logo_text.png"></img></a>
           </div>
           <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">

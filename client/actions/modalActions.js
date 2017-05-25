@@ -1,9 +1,17 @@
-import { CLOSE_SIGN_IN_MODAL, OPEN_SIGN_IN_MODAL } from './types';
+import { CLOSE_SIGN_IN_MODAL, OPEN_SIGN_IN_MODAL, CLOSE_EVENT_MODAL, OPEN_EVENT_MODAL } from './types';
 
 export function openSignInModal() {
   return { type: OPEN_SIGN_IN_MODAL }
 }
 
+export function openEventModal() {
+  return { type: OPEN_EVENT_MODAL }
+}
+
 export function closeSignInModal() {
   return { type: CLOSE_SIGN_IN_MODAL }
+}
+
+export function closeEventModal() {
+  return { type: CLOSE_EVENT_MODAL }
 }

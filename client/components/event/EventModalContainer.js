@@ -1,13 +1,11 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import css from './main.css'
+import css from './EventModal.css'
 import TextFieldGroup from '../common/TextFieldGroup';
-import FacebookSocialLogin from './FacebookSocialLogin'
-import GoogleSocialLogin from './GoogleSocialLogin'
 
 
-class SignInModalContainer extends React.Component { 
+class EventModalContainer extends React.Component { 
 
   render() {
     console.log(this.props.showModal)
@@ -16,16 +14,14 @@ class SignInModalContainer extends React.Component {
           <Modal.Dialog>
             <Modal.Body>
               <div class="row">
-                <h3 class="text-center">Welcome Back!</h3>
+                <h3 class="text-center">EVENT HERE</h3>
                 <p class="text-center">We've been waiting to show you <br></br> all the new events we found.</p>
               </div>
 
               <div class="row d-flex-centre">
                 <div class="left">
-                    <FacebookSocialLogin/>
                 </div>
                 <div class="right">
-                    <GoogleSocialLogin  />
                 </div>
               </div>
               <div class="d-flex-centre">
@@ -66,10 +62,11 @@ class SignInModalContainer extends React.Component {
     );
 
     if(this.props.showModal){
-      return modalInstance;
+      return (modalInstance);
     } else{
       return null;
     }
   }
 }
-export default SignInModalContainer;
+export default EventModalContainer;
+
