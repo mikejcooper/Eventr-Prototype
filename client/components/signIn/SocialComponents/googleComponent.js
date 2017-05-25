@@ -98,7 +98,7 @@ class GoogleLogin extends Component {
   render() {
     return (
       <span>
-        <input type="image" onClick={this.signIn} class="login-button" src="http://ucollect.biz/wp-content/uploads/2015/03/Red-signin_Long_base_44dp.png" />
+        <input type="image" onClick={this.signIn} class="buttons" src="http://localhost:2000/images/google_button.png" />
       </span>
     );
   }

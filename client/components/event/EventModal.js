@@ -6,13 +6,14 @@ import { closeEventModal } from '../../actions/modalActions'
 
 @connect((store) => {
   return {
-    modalEvent: store.modal.eventBool
+    modalEvent: store.modal.eventBool,
+    modalData: store.modal.event_modal_data
   };
 })
 class EventModal extends React.Component {
   constructor () {
     super()
-    this.state = { showModal: false }
+    this.state = { showModal: false, tags: '' }
     this.closeModal = this.closeModal.bind(this)
   }
 
@@ -22,9 +23,10 @@ class EventModal extends React.Component {
 
   render() {
     this.state.showModal = this.props.modalEvent
+    this.state.tags = this.props.modalData.tags
 
     return(
-      <EventModalContainer showModal = {this.state.showModal} closeModal = { this.closeModal }/>
+      <EventModalContainer showModal = {this.state.showModal} closeModal = { this.closeModal } tags = {this.state.tags}/>
     )
   }
 }

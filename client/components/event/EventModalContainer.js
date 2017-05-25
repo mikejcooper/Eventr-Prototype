@@ -11,10 +11,10 @@ class EventModalContainer extends React.Component {
     console.log(this.props.showModal)
     const modalInstance = (
         <div class="modal-fade">
-          <Modal.Dialog>
-            <Modal.Body>
+        <Modal show={this.props.showModal} onHide={this.props.closeModal} >
+          <Modal.Body>
               <div class="row">
-                <h3 class="text-center">EVENT HERE</h3>
+                <h3 class="text-center">{this.props.tags}</h3>
                 <p class="text-center">We've been waiting to show you <br></br> all the new events we found.</p>
               </div>
 
@@ -56,8 +56,8 @@ class EventModalContainer extends React.Component {
               <Button onClick={this.props.closeModal}>Close</Button>
               <Button bsStyle="primary" onClick={fun => console.log("here")}>Save changes</Button>
             </Modal.Footer>
-
-          </Modal.Dialog>
+        </Modal>
+          
         </div>
     );
 
