@@ -97,7 +97,7 @@ class EventList extends React.Component {
 
   renderEvents(events,size){
     let lis = [];
-    for (var i = events.length - 1; i >= 0; i--) {
+    for (var i = 0; i < events.length; i--) {
       lis.push(<Event class="event" key ={i} data={events[i]} size={size}/>);
     }
     return lis;
