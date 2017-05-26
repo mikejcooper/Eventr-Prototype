@@ -49,6 +49,7 @@ export default (state = initialState, action = {}) => {
 
     default: 
     	console.log("REDUCER: default called");
+    	console.log(state)
     	return state;
   }
 }

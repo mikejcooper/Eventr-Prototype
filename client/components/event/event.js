@@ -23,9 +23,8 @@ class Event extends React.Component {
       this.setState({hover: false});
   }
 
-  handleImgClick(){
-      console.log("click")
-      this.props.dispatch(openEventModal());
+  handleImgClick(event_data){
+      this.props.dispatch(openEventModal(event_data));
   }
 
   renderTags(tags) {
@@ -69,7 +68,7 @@ class Event extends React.Component {
     }
     return (
       <div class="event" style={style} onMouseEnter={this.handleHoverOn} onMouseLeave={this.handleHoverOff}>
-        <img class={cl} onClick={this.handleImgClick} src={d.picture_url} />
+        <img class={cl} onClick={() => { this.handleImgClick(d) }} src={d.picture_url} />
         <div class="title">
           <h5>{d.name}</h5>
         </div>

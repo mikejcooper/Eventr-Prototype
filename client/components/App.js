@@ -8,8 +8,8 @@ import { connect } from "react-redux";
 
 @connect((store) => {
   return {
-    isSignInModalOpen: store.modal.isSignInModalOpen,
-    isEventModalOpen: store.modal.isEventModalOpen
+    isSignInModalOpen: store.modal.signInBool,
+    isEventModalOpen: store.modal.eventBool
   };
 })
 class App extends React.Component {

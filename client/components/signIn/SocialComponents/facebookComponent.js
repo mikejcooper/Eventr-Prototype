@@ -211,7 +211,7 @@ class FacebookLogin extends React.Component {
   render() {
     return (
       <span>
-        <input type="image" onClick={this.click} class="login-button" src="https://i.stack.imgur.com/ZW4QC.png" />
+        <input type="image" onClick={this.click} class="buttons" src="http://localhost:2000/images/facebook_button.png" />
       </span>
     );
   }

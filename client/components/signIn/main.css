@@ -10,30 +10,28 @@ margin: 0 auto;
 }
 
 .left, .right {
-
-  padding: 20px; 
- 
+  display: flex;
+  justify-content: center;
+  padding-left: 22px;
 }
 
-.form-control{
-/*	width: 50%;*/
+.social-buttons-container{
+  padding-top: 10px;
+  padding-bottom: 10px
+
+}
+
+.buttons{
+  max-width: 90%;
 }
 
 .hide {
    visibility: hidden;
 }
 
-.login-button{
-  width: auto;
-  height: auto;
-  max-width: 95%;
-  max-height: 95%;
-  padding-left: 20px; 
-}
-
 @media screen and (min-width: 768px) {
     .modal-dialog {
-      width: 400px; /* either % (e.g. 60%) or px (400px) */
+      width: 500px; /* either % (e.g. 60%) or px (400px) */
 			display: inline-block;
 			text-align: left;
 			vertical-align: middle;
