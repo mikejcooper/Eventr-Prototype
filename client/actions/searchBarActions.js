@@ -1,5 +1,5 @@
 import axios from "axios";
-import {ADD_TAG_SEARCH_BAR, DELETE_TAG_SEARCH_BAR, FETCH_EVENTS_FULFILLED,FETCH_EVENTS_REJECTED} from './types';
+import {FETCH_SUGGESTTAGS_SEARCH_BAR, ADD_TAG_SEARCH_BAR, DELETE_TAG_SEARCH_BAR, FETCH_EVENTS_FULFILLED,FETCH_EVENTS_REJECTED} from './types';
 
 export function addTag(id, text) {
   return {
@@ -17,15 +17,11 @@ export function deleteTag(id) {
 
 export function searchWithSearchBar(tags){
 	return function(dispatch) {
-		// let events = [];
-		// for (var i = 0; i < 33; i++) {
-		// 	events[i] = {name: 'name1', id: {i}, subTitle: 'subTitle', imageURL: '../../images/event1.jpg', size: 3, price: 3.95, rating: 4, tags: ['super','awesome','cool','music']};
-		// }
 		var result = tags.map(function(a) {return a.text;});
 		var meta = new Object();
 		var headers = new Object();
 		headers.tags = result.join(" ");
-		headers.limit = 40;
+		headers.limit = 47;
 		meta.headers = headers;
 		console.log(headers);
 		meta = {
@@ -45,25 +41,25 @@ export function searchWithSearchBar(tags){
 	}
 }
 
-// export function fetchSuggestTags(){
-// 	return function(dispatch) {
-// 		let events = [];
-// 		for (var i = 0; i < 10; i++) {
-// 			events[i] = {name: 'name1', id: {i}, subTitle: 'subTitle', imageURL: '../../images/event1.jpg', size: 3, price: 3.95, rating: 4, tags: ['super','awesome','cool','music']};
-// 		}
-// 	    let eventslist = [];
-// 	    for (var i = 0; i < 6; i++) {
-// 			eventslist[i] = events;
-// 		}
-// 		axios.get("http://localhost:4000/api/tags/search/all")
-// 		.then((response) => {
-// 			let lists = splitEvents(response.data,10);
-// 			console.log("fetching events");
-// 			dispatch({type: 'FETCH_EVENTS_FULFILLED', payload: lists});
-// 		})
-// 		.catch((err) => {
-// 			dispatch({type: 'FETCH_EVENTS_FULFILLED', payload: eventslist});
-// 			console.log(err);
-// 		});
-// 	}
-// }
+
+export function fetchSuggestTags(){
+	return function(dispatch) {
+		var meta = new Object();
+		var headers = new Object();
+		headers.number = 20;
+		meta = {
+			params : headers
+		}
+		axios.get("http://localhost:4000/api/events/search/getTags",meta)
+		.then((response) => {
+			let tags = response.data.tags.split(',');
+			console.log(tags);
+			console.log("fetching fetchSuggestTags");
+			console.log(response.data.tags);
+			dispatch({type: FETCH_SUGGESTTAGS_SEARCH_BAR, payload: tags});
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+	}
+}

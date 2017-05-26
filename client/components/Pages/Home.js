@@ -5,6 +5,7 @@ import SignInModal from '../signIn/SignInModal';
 import Event from '../event/event';
 import EventList from '../EventList/eventList'
 import { connect } from 'react-redux';
+import { searchWithSearchBar } from '../../actions/searchBarActions'
 
 @connect((store) => {
   return {
@@ -16,6 +17,10 @@ class Home extends React.Component {
   constructor(){
       super();
       this.renderEvents.bind(this);
+  }
+
+  componentDidMount(){
+    this.props.dispatch(searchWithSearchBar([]));
   }
 
  splitEvents(events,size) {
@@ -39,6 +44,7 @@ class Home extends React.Component {
   }
 
   render() {
+    // this.props.dispatch(searchWithSearchBar([]));
     const containerStyle = {
       marginTop: "-30px", // Allow children to render without hitting nav bar
     };
@@ -47,6 +53,7 @@ class Home extends React.Component {
       <div style={containerStyle}>
         <div class="my-image"/>
         <div class="filler"/>
+        <svg src="../../images/dance-path.sketch" class="svg"/>
        {this.renderEvents(this.props.events)}
        <SignInModal/>
       </div>

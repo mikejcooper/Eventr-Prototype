@@ -3,13 +3,14 @@ import SearchTag from '../SearchTag/SearchTag';
 import SuggestTag from './SuggestTag/SuggestTag';
 import React from 'react';
 import { connect } from "react-redux";
+import { fetchSuggestTags } from '../../../actions/searchBarActions'
 
 @connect(
-// (store) => {
-//   return {
-//     suggestTags: store.searchBar.suggestTags
-//   };
-// }
+(store) => {
+  return {
+    suggestTags: store.searchBar.suggestTags
+  };
+}
 )
 
 class TagSpace extends React.Component {
@@ -19,11 +20,16 @@ class TagSpace extends React.Component {
 		this.renderSuggestTags.bind(this);
 	}
 
+	componentDidMount(){
+    	this.props.dispatch(fetchSuggestTags());
+  	}
+
 	renderSuggestTags(){
-		let fakeData = ["hey","tag","rand","stuff","to","fake","data","for","now","hey","tag","rand","stuff","to","fake","data","for","now","hey","tag","rand","stuff","to","fake","data","for","now"];
+		console.log("printing suggestTagSpace");
+		console.log(this.props.suggestTags);
 		let lis = [];
-		for (var i = fakeData.length - 1; i >= 0; i--) {
-			lis.push(<SuggestTag class="suggestTag" key ={i} data={fakeData[i]}/>);
+		for (var i = 18; i >= 0; i--) {
+			lis.push(<SuggestTag class="suggestTag" key ={i} data={this.props.suggestTags[i]}/>);
 		}
 		return lis;
 	}

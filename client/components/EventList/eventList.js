@@ -13,6 +13,10 @@ class EventList extends React.Component {
       this.handleTabClick = this.handleTabClick.bind(this);
   }
 
+  componentDidMount(){
+    this.onresize();
+  }
+
   setNextIndex(numberOfTabs,func){
     let newIndex = func(this.state.index);
     if(newIndex == numberOfTabs){
@@ -20,7 +24,8 @@ class EventList extends React.Component {
     } else if(newIndex < 0){
       newIndex = numberOfTabs-1;
     }
-    this.setState({index: newIndex}) ;
+    if(this.refs.main)
+      this.setState({index: newIndex});
   }
 
   getPos(numberOfEvents,numberOfTabs,numberElementsDisplayed,outerWidth){
@@ -32,26 +37,34 @@ class EventList extends React.Component {
   }
 
   outerWidth(el) {
-    var width = el.offsetWidth;
-    var style = getComputedStyle(el);
-    width += parseInt(style.marginLeft) + parseInt(style.marginRight);
-    return width;
+    if(this.refs.main){
+      var width = el.offsetWidth;
+      var style = getComputedStyle(el);
+      width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+      return width;
+    }
   }
 
   handleTabClick(goToIndex){
     console.log(goToIndex);
-    this.setState({index: goToIndex})
+    if(this.refs.main){
+      this.setState({index: goToIndex})
+    }
   }
 
   onresize() {
     var items = document.querySelectorAll(".event");
-    document.qu
+
     let widthComponent = this.outerWidth(items[0]);
     let maxElementsDisplayed = this.getMaxNumberOfElements(widthComponent);
     maxElementsDisplayed = maxElementsDisplayed > this.props.events.length ? this.props.events.length : maxElementsDisplayed;
-    this.setState({elementsDisplayed: maxElementsDisplayed > 0 ? maxElementsDisplayed : 1 });
+    if(this.refs.main){
+      this.setState({elementsDisplayed: maxElementsDisplayed > 0 ? maxElementsDisplayed : 1 });
+    }
     if(this.state.index > maxElementsDisplayed - 1){
-      this.setState({index: maxElementsDisplayed });
+      if(this.refs.main){
+        this.setState({index: maxElementsDisplayed });
+      }
     }
   }
 
@@ -110,7 +123,7 @@ class EventList extends React.Component {
       width: size * this.state.elementsDisplayed,
     }
     return (
-      <div style={styleEventList} class="eventList">
+      <div style={styleEventList} class="eventList" ref="main">
         <div>
 
           <div class="logo"/>

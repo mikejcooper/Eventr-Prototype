@@ -101,18 +101,29 @@
   position: absolute;
   border: none;
   background-color: #FFFFFF;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 20px;
 }
 
-.search-icon {
+.search-icon-navigation {
+  border-radius: 20px;
+  /*position: fixed;*/
+  right: 50%;
+  left: 50%;
+  top: 0px;
+  width: 35px;
+  height: 35px;
   /*pointer-events: none;*/
+  background-color: #FFFFFF;
   position: absolute;
   margin-top: 9px;
   margin-left: 9px;
-  width: 20px;
-  height: 20px;
+  /*background: url("http://localhost:2000/images/search-icon.png");*/
+  background-image: url("http://localhost:2000/images/search-icon.png");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .inverted {

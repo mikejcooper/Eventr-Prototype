@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './SuggestTag.css';
 import { connect } from "react-redux";
-import {addTag} from '../../../../actions/searchBarActions';
+import {fetchSuggestTags,addTag, searchWithSearchBar} from '../../../../actions/searchBarActions';
 
 @connect((store) => {
   return {
@@ -17,7 +17,12 @@ class SuggestTag extends React.Component {
   addTag(){
   	// console.log(this.props);
     console.log("adding tag: " + this.props.data);
+    let newTag = new Object();
+    newTag.text = this.props.data;
+    newTag.id = this.props.tags.length;
     this.props.dispatch(addTag(this.props.tags.length,this.props.data));
+    this.props.dispatch(searchWithSearchBar(this.props.tags.concat(newTag)));
+    this.props.dispatch(fetchSuggestTags());
   }
 
   render() {

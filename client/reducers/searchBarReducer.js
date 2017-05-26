@@ -1,4 +1,4 @@
-import {ADD_TAG_SEARCH_BAR, DELETE_TAG_SEARCH_BAR, FETCH_EVENTS_FULFILLED, FETCH_EVENTS_REJECTED} from '../actions/types';
+import {FETCH_SUGGESTTAGS_SEARCH_BAR, ADD_TAG_SEARCH_BAR, DELETE_TAG_SEARCH_BAR, FETCH_EVENTS_FULFILLED, FETCH_EVENTS_REJECTED} from '../actions/types';
 
 const initialState = {
 	tags : [],
@@ -40,6 +40,11 @@ export default (state = initialState, action = {}) => {
 		  events: action.payload,
 		}
 		break;
+	case FETCH_SUGGESTTAGS_SEARCH_BAR:
+		return {
+			...state,
+			suggestTags: action.payload,
+		}
 	
 
     default: 
