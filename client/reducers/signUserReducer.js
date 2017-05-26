@@ -1,15 +1,21 @@
-import { FETCH_SIGNUP_REQUEST } from '../actions/types';
+import { FETCH_SIGNUP_REQUEST, SIGNIN_SUCESS, SIGNIN_NOT_SUCESS } from '../actions/types';
 
 const initialState = {
-  signInBool : false,
-  eventBool : false, 
-  event_modal_data: []
+  isLoggingIn : false,
+  loginSucess : false,
+  loginFailed: false,
 };
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case FETCH_SIGNUP_REQUEST: 
       console.log("FETCH_SIGNUP_REQUEST")
+      break
+    case SIGNIN_SUCESS: 
+      state = {...state, loginSucess : true}
+      break
+    case SIGNIN_NOT_SUCESS: 
+      state = {...state, loginFailed : true}
       break
      
     // case CLOSE_SIGN_IN_MODAL:

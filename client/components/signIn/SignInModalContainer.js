@@ -5,9 +5,64 @@ import css from './main.css'
 import TextFieldGroup from '../common/TextFieldGroup';
 import FacebookSocialLogin from './FacebookSocialLogin'
 import GoogleSocialLogin from './GoogleSocialLogin'
+import { connect } from "react-redux";
+import { userSignInRequest } from '../../actions/signupActions'
 
 
+
+// Maps dispatcher to props
+@connect()
 class SignInModalContainer extends React.Component { 
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      signInRequest: false,
+    }
+    this.renderSignInSpinner = this.renderSignInSpinner.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.signIn = this.signIn.bind(this)
+
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  signIn(){
+    this.setState({ signInRequest: true });
+    console.log(this.state)
+    this.props.dispatch(userSignInRequest(this.state.username, this.state.password));
+  }
+
+
+  renderSignInSpinner() {
+    if(this.state.signInRequest){
+      return (
+        <div class="div">
+          Checking login...
+        </div>
+      )
+    } 
+
+    if(this.props.loginSucess){
+      return (
+        <div class="div">
+          Login Sucess!
+        </div>
+      )
+    } 
+
+    if(this.props.loginFailed){
+      return (
+        <div class="div">
+          Login Failed!
+        </div>
+      )
+    } 
+  }
+
 
   render() {
     console.log(this.props.showModal)
@@ -35,10 +90,14 @@ class SignInModalContainer extends React.Component {
                   <TextFieldGroup
                     label="Username"
                     field="username"
+                    value={this.state.username}
+                    onChange={this.onChange}
                   />
                    <TextFieldGroup
                     label="Password"
                     field="password"
+                    value={this.state.password}
+                    onChange={this.onChange}
                   />
 
                 </form>
@@ -55,11 +114,13 @@ class SignInModalContainer extends React.Component {
                 </a>
               </div>
 
-
           </Modal.Body>
           <Modal.Footer>
             <Button class = "left" onClick={this.props.closeModal}>Close</Button>
-            <Button class = "" onClick={this.props.closeModal}>LOGIN IN</Button>
+            <div class = "d-flex-centre">
+              {this.renderSignInSpinner()}
+            </div>
+            <Button class = "" onClick={this.signIn}>LOGIN IN</Button>
           </Modal.Footer>
         </Modal>
       </div>
