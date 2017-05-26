@@ -49,16 +49,17 @@ class SignInModalContainer extends React.Component {
                 </a>
               </div>
               <div class="d-flex-centre">
-                <a href="https://en.wikipedia.org/wiki/Event" class="">
+                <a href="/signup" class="">
                     <span class="i-gplus icon"></span>
-                    <span class="text">LOGIN IN</span>
+                    <span class="text">SIGN UP</span>
                 </a>
               </div>
 
+
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.props.closeModal}>Close</Button>
-            <Button bsStyle="primary" onClick={fun => console.log("here")}>Save changes</Button>
+            <Button class = "left" onClick={this.props.closeModal}>Close</Button>
+            <Button class = "" onClick={this.props.closeModal}>LOGIN IN</Button>
           </Modal.Footer>
         </Modal>
       </div>

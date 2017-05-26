@@ -4,12 +4,15 @@ import map from 'lodash/map';
 import classnames from 'classnames';
 import validateInput from '../../../server/shared/validations/signup';
 import TextFieldGroup from '../common/TextFieldGroup';
+import axios from 'axios';
+
 
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      first_name: '',
+      last_name: '',
       email: '',
       password: '',
       passwordConfirmation: '',
@@ -20,6 +23,7 @@ class SignupForm extends React.Component {
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.CheckAccountExists = this.CheckAccountExists.bind(this);
   }
 
   onChange(e) {
@@ -41,17 +45,40 @@ class SignupForm extends React.Component {
 
     if (this.isValid()) {
       this.setState({ errors: {}, isLoading: true });
-      this.props.userSignupRequest(this.state).then(
-        () => {
+
+    }
+    this.CheckAccountExists(this.state.email)
+
+  }
+
+  CheckAccountExists(email){
+    axios.get("http://localhost:4000/api/users/" + email)
+      .then((response) => {
+        console.log("HERE   " + JSON.stringify(response) )
+        if(response['data'] == 0){
           this.props.addFlashMessage({
             type: 'success',
-            text: 'You signed up successfully. Welcome!'
+            text: 'You signed up successfully. Welcome! Sign in to access your account.'
           });
-          this.context.router.push('/');
-        },
-        ({ data }) => this.setState({ errors: data, isLoading: false })
-      );
-    }
+
+          this.props.userSignupRequest(this.state).then(
+            () => {
+              this.context.router.push('/signUp');
+            },
+            ({ data }) => this.setState({ errors: data, isLoading: false })
+          );
+
+        } else {
+          this.props.addFlashMessage({
+            type: 'error',
+            text: 'Email address is already being used.'
+          });
+        }
+      })
+      .catch((err) => {
+        // dispatch({type: FETCH_EVENTS_FULFILLED, payload: events});
+        console.log(err);
+      });
   }
 
   render() {
@@ -64,11 +91,19 @@ class SignupForm extends React.Component {
         <h1>Join our community!</h1>
 
         <TextFieldGroup
-          error={errors.username}
-          label="Username"
+          error={errors.first_name}
+          label="First Name"
           onChange={this.onChange}
-          value={this.state.username}
-          field="username"
+          value={this.state.first_name}
+          field="first_name"
+        />
+
+        <TextFieldGroup
+          error={errors.last_name}
+          label="Last Name"
+          onChange={this.onChange}
+          value={this.state.last_name}
+          field="last_name"
         />
 
         <TextFieldGroup

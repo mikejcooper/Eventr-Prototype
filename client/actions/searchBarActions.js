@@ -20,7 +20,7 @@ export function searchWithSearchBar(tags){
 		var result = tags.map(function(a) {return a.text;});
 		var meta = new Object();
 		var headers = new Object();
-		headers.tags = result.join(" ");
+		headers.tags = result.join(",");
 		headers.limit = 47;
 		meta.headers = headers;
 		console.log(headers);
@@ -32,6 +32,7 @@ export function searchWithSearchBar(tags){
 		.then((response) => {
 			// let fetched = splitEvents(response.data,10);
 			console.log("fetching events");
+			console.log(response)
 			dispatch({type: FETCH_EVENTS_FULFILLED, payload: response.data});
 		})
 		.catch((err) => {

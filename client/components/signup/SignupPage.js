@@ -3,6 +3,8 @@ import SignupForm from './SignupForm';
 import { connect } from 'react-redux';
 import { userSignupRequest } from '../../actions/signupActions';
 import { addFlashMessage } from '../../actions/flashMessagesActions';
+import axios from 'axios';
+
 
 
 class SignupPage extends React.Component {
