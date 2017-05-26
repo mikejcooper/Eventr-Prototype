@@ -4,6 +4,11 @@
 	/*background-color: #A00F0A;*/
 	background-image: url("http://localhost:2000/images/PNG_after1.jpg");
 	background-size: 450px 200px;
+	background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 .control-left {

@@ -146,8 +146,9 @@ class EventList extends React.Component {
         <div>
 
           <div class="logo">
-            <img class="list-icon" src={iconAndTitle.image}/>
             <div class="list-title">{iconAndTitle.title}</div>
+            <img class="list-icon" src={iconAndTitle.image}/>
+            
           </div>
           <div class="navigation">
 
