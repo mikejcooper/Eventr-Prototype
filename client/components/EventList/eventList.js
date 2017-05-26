@@ -11,10 +11,28 @@ class EventList extends React.Component {
       this.setNextIndex = this.setNextIndex.bind(this);
       this.getPos = this.getPos.bind(this);
       this.handleTabClick = this.handleTabClick.bind(this);
+      this.getIconAndTitle = this.getIconAndTitle.bind(this);
   }
 
   componentDidMount(){
     this.onresize();
+  }
+
+  getIconAndTitle(){
+    console.log("key is: " + this.props.number);
+    switch(this.props.number%3){
+      case 0:
+        return { title: "Ticketed" , image: "http://localhost:2000/images/ticket.png"}
+      break;
+      case 1:
+        return { title: "Dancing" , image: "http://localhost:2000/images/discoball.png"}
+      break;
+      case 2:
+        return { title: "Drinking" , image: "http://localhost:2000/images/cocktail.png"}
+      break;
+      default:
+        return { title: "Dancing" , image: "http://localhost:2000/images/discoball.png"}
+    }
   }
 
   setNextIndex(numberOfTabs,func){
@@ -122,11 +140,15 @@ class EventList extends React.Component {
     let styleEventList = {
       width: size * this.state.elementsDisplayed,
     }
+    let iconAndTitle = this.getIconAndTitle();
     return (
       <div style={styleEventList} class="eventList" ref="main">
         <div>
 
-          <div class="logo"/>
+          <div class="logo">
+            <img class="list-icon" src={iconAndTitle.image}/>
+            <div class="list-title">{iconAndTitle.title}</div>
+          </div>
           <div class="navigation">
 
             {maxNumberOfElements > 1 && this.renderTabs(events.length)}

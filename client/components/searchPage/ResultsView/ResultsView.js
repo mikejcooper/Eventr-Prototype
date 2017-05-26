@@ -32,7 +32,7 @@ class ResultsView extends React.Component {
     console.log(events);
     let lists = this.splitEvents(events,12);
     for (var i = 0; i < lists.length; i++) {
-      lis.push(<EventList key={i} events={lists[i]} class="eventList" size={400}/>);
+      lis.push(<EventList key={i} number={i} events={lists[i]} class="eventList" size={400}/>);
     }
     return lis;
   }

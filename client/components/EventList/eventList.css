@@ -89,7 +89,7 @@
 }
 
 .navigation {
-    height: 50px;
+    height: 60px;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -99,7 +99,6 @@
 .logo {
     height: 50px;
     width: 50px;
-    background-color: #FF00FF;
     float: left;
 }
 
@@ -153,4 +152,15 @@
 #navLinks ul li.active:hover {
     background-color: #484848;
     color: #FFFFFF;
+}
+
+.list-icon {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.list-title {
+    float: left;
+    font-size: 16px;
 }
