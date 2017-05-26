@@ -1,0 +1,73 @@
+@media screen and (min-width: 768px) {
+    .event-modal .modal-dialog {
+      width: 1100px; /* either % (e.g. 60%) or px (400px) */
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .event-modal .modal {
+      text-align: center;
+      !opacity: 1;
+    }
+    .event-modal .modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+  }
+
+  
+}
+
+.event-modal .cover-image-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-size: cover;
+  align-items: stretch;
+  border-bottom: 2px solid black;
+}
+
+.event-modal .cover-image{
+  width: 100%;
+  height: 350px;
+  filter: brightness(70%) blur(2px) ;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+
+}
+
+/*.event-modal .cover-image:before{
+  
+  filter: brightness(70%);
+  filter: blur(2px);
+  
+}*/
+
+
+
+.event-modal .bottom{
+  position: absolute;
+
+  align-self: flex-end;
+
+
+}
+
+.event-modal .description{
+  padding-left: 10px;
+}
+
+.event-modal .title {
+  pointer-events:none;
+  top: 0;
+  padding-left: 15px;
+  padding-top: 15px;
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 1
+}
