@@ -12,6 +12,11 @@
 	align-items: center;
 	-webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 .search-tag {
