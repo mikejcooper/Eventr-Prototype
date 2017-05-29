@@ -4,14 +4,17 @@ import webpack from 'webpack';
 
 
 export default {
-  devtools: 'eval-source-map',
+  debug: true,
+  devtool: "source-map",
   entry: [
     'webpack-hot-middleware/client',
     path.join(__dirname, '/client/index.js')
   ],
   output: {
+    filename: "bundle.js",
     path: '/',
-    publicPath: '/'
+    publicPath: '/',
+    path: __dirname + "/build",
   },
   plugins: [
     new webpack.NoErrorsPlugin(),

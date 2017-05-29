@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './SearchTag.css';
 import { connect } from "react-redux";
-import {deleteTag} from '../../../actions/searchBarActions';
+import {deleteTag} from '../../../modules/actions/searchBarActions';
 
 @connect((store) => {
   return {

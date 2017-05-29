@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch server --exec babel-node -- server/index.js",
+    "dev": "nodemon --watch server --exec babel-node --debug=63342 -- server/index.js",
     "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -38,7 +38,8 @@ class EventModalContainer extends React.Component {
     );
 
     if(this.props.showModal){
-      return (modalInstance);
+        console.log("hello");
+        return (modalInstance);
     } else{
       return null;
     }

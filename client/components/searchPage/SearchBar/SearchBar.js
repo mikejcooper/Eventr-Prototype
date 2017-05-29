@@ -1,6 +1,6 @@
 import css from './SearchBar.css';
 import React from 'react';
-import { addTag, searchWithSearchBar } from '../../../actions/searchBarActions';
+import { addTag, searchWithSearchBar } from '../../../modules/actions/searchBarActions';
 import { connect } from "react-redux";
 import SearchTag from '../SearchTag/SearchTag';
 

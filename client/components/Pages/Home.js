@@ -5,7 +5,7 @@ import SignInModal from '../signIn/SignInModal';
 import Event from '../event/event';
 import EventList from '../EventList/eventList'
 import { connect } from 'react-redux';
-import { searchWithSearchBar } from '../../actions/searchBarActions'
+import { searchWithSearchBar } from '../../modules/actions/searchBarActions'
 
 @connect((store) => {
   return {

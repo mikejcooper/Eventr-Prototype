@@ -3,7 +3,7 @@ import SearchTag from '../SearchTag/SearchTag';
 import SuggestTag from './SuggestTag/SuggestTag';
 import React from 'react';
 import { connect } from "react-redux";
-import { fetchSuggestTags } from '../../../actions/searchBarActions'
+import { fetchSuggestTags } from '../../../modules/actions/searchBarActions'
 
 @connect(
 (store) => {

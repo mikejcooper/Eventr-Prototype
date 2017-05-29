@@ -1,8 +1,8 @@
 import React from 'react';
 import SignupForm from './SignupForm';
 import { connect } from 'react-redux';
-import { userSignupRequest } from '../../actions/signupActions';
-import { addFlashMessage } from '../../actions/flashMessagesActions';
+import { userSignupRequest } from '../../modules/actions/signupActions';
+import { addFlashMessage } from '../../modules/actions/flashMessagesActions';
 import axios from 'axios';
 
 

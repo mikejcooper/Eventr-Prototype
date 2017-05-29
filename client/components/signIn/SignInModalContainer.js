@@ -6,7 +6,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import FacebookSocialLogin from './FacebookSocialLogin'
 import GoogleSocialLogin from './GoogleSocialLogin'
 import { connect } from "react-redux";
-import { userSignInRequest } from '../../actions/signupActions'
+import { userSignInRequest } from '../../modules/actions/signupActions'
 
 
 

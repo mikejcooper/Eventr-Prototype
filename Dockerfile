@@ -10,9 +10,9 @@
 
   COPY . .
 
-  EXPOSE 8000
+  EXPOSE 63342
 
-  CMD ["npm","dev"]
+  CMD ["npm","dev","debug"]
 
 
 # ----------------------Production ---------------------------------

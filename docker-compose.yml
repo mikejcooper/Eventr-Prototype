@@ -8,6 +8,7 @@ services:
     command: npm run dev
     ports:
       - '3000:3000'
+      - '63342:63342'
     volumes:
       - '.:/usr/src/app'
       - 'api-deps:/usr/src/app/node_modules'

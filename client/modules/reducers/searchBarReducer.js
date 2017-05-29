@@ -7,7 +7,8 @@ const initialState = {
 };
 
 export default (state = initialState, action = {}) => {
-	console.log("searchbarreducer called");
+    console.log("searchbarreducer called");
+    console.log("HELLLO called");
 	console.log(action.type);
   switch(action.type) {
     case ADD_TAG_SEARCH_BAR:

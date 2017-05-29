@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SignInModalContainer from './SignInModalContainer'
-import { closeSignInModal } from '../../actions/modalActions'
+import { closeSignInModal } from '../../modules/actions/modalActions'
 
 
 @connect((store) => {
@@ -19,7 +19,8 @@ class SignInModal extends React.Component {
   }
 
   closeModal(){
-    this.props.dispatch(closeSignInModal());
+      console.log("*** Close Signin Modal ***")
+      this.props.dispatch(closeSignInModal());
   }
 
 
