@@ -10,7 +10,6 @@ class EventModalContainer extends React.Component {
 
   render() {
     let style_background = { 'backgroundImage': 'url(' + this.props.event.cover_url + ')'}
-    console.log(this.props)
     const modalInstance = (
         <div class="">
         <Modal class = "event-modal" show={this.props.showModal} onHide={this.props.closeModal} >
@@ -38,7 +37,6 @@ class EventModalContainer extends React.Component {
     );
 
     if(this.props.showModal){
-        console.log("hello");
         return (modalInstance);
     } else{
       return null;

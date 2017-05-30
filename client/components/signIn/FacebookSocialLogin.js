@@ -9,13 +9,11 @@ class FacebookSocialLogin extends React.Component {
   }
 
   responseFacebook(){
-    console.log("denfk")
   }
 
   render() {
     return(
       <div >
-
         <FacebookLogin
           appId="281638378963293"
           autoLoad={true}

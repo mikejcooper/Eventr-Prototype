@@ -7,9 +7,9 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import combineReducers from './modules/reducers/combineReducers';
 
 
-import routes from './routes';
+import routes from './routes'
 
-const middleware = applyMiddleware(thunk)
+const middleware = applyMiddleware(thunk);
 
 const initialState = { 
   tags: [{id:123, text:'hello'}] 
@@ -29,4 +29,5 @@ const store = createStore(
 render(
   <Provider store={store}>
     <Router history={browserHistory} routes={routes} />
-  </Provider>, document.getElementById('app'));
+  </Provider>, document.getElementById('app')
+);

@@ -54,7 +54,6 @@ class SignupForm extends React.Component {
   CheckAccountExists(email){
     axios.get("http://localhost:4000/api/users/" + email)
       .then((response) => {
-        console.log("HERE   " + JSON.stringify(response) )
         if(response['data'] == 0){
           this.props.addFlashMessage({
             type: 'success',
@@ -77,7 +76,6 @@ class SignupForm extends React.Component {
       })
       .catch((err) => {
         // dispatch({type: FETCH_EVENTS_FULFILLED, payload: events});
-        console.log(err);
       });
   }
 

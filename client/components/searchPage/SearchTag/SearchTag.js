@@ -15,7 +15,6 @@ class SearchTag extends React.Component {
   }
 
   removeTag(){
-    console.log("remove tag: " + this.props.value.text);
     this.props.dispatch(deleteTag(this.props.value.text));
   }
 

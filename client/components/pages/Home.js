@@ -1,9 +1,8 @@
 import React from 'react';
-import Playground from '../Playground/Playground';
-import css from './main.css'
+import css from './Home.css'
 import SignInModal from '../signIn/SignInModal';
-import Event from '../event/event';
-import EventList from '../EventList/eventList'
+import Event from '../event/Event';
+import EventList from '../EventList/EventList'
 import { connect } from 'react-redux';
 import { searchWithSearchBar } from '../../modules/actions/searchBarActions'
 
@@ -35,7 +34,6 @@ class Home extends React.Component {
   renderEvents(events){
     let lis = [];
     if(events == null) return;
-    console.log(events);
     let lists = this.splitEvents(events,12);
     for (var i = 0; i < lists.length; i++) {
       lis.push(<EventList key={i} number={i} events={lists[i]} class="eventList" size={300}/>);
@@ -48,7 +46,6 @@ class Home extends React.Component {
     const containerStyle = {
       marginTop: "-30px", // Allow children to render without hitting nav bar
     };
-    console.log("render called");
     return (
       <div style={containerStyle}>
         <div class="my-image">

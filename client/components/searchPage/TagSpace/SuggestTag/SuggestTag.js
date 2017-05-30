@@ -16,7 +16,6 @@ class SuggestTag extends React.Component {
 
   addTag(){
   	// console.log(this.props);
-    console.log("adding tag: " + this.props.data);
     let newTag = new Object();
     newTag.text = this.props.data;
     newTag.id = this.props.tags.length;

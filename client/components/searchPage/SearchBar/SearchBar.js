@@ -37,9 +37,7 @@ class SearchBar extends React.Component {
     let lis = [];
     const {tags} = this.props;
 
-    // console.log(this.props.tags[0]);
     if(this.props.tags == null) return;
-    // console.log(tags.length);
     for (var i =  0; i < this.props.tags.length; i++) {
       lis.push(<SearchTag key={i} value={this.props.tags[i]} class="search-tag"/>);
     }
@@ -50,11 +48,7 @@ class SearchBar extends React.Component {
     let searchBar = this.refs.textInput;
     let text = searchBar.value;
     if((event.keyCode === 13 || event.keyCode === 32)&& !this.isStringEmpty(text)){
-      console.log("before");
-      console.log(this.props.tags);
       this.addTag(text);
-      console.log("after");
-      console.log(this.props.tags);
       this.search();
       this.refs.textInput.value = "";
     }

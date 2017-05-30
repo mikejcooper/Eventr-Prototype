@@ -9,7 +9,6 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case FETCH_SIGNUP_REQUEST: 
-      console.log("FETCH_SIGNUP_REQUEST")
       break
     case SIGNIN_SUCESS: 
       state = {...state, loginSucess : true}

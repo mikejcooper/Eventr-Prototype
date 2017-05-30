@@ -9,7 +9,6 @@ class GoogleSocialLogin extends React.Component {
   }
 
   responseGoogle(){
-    console.log("denfk")
   }
 
   render() {

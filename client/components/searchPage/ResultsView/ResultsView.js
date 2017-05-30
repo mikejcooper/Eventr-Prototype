@@ -1,8 +1,8 @@
 import css from './ResultsView.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import Event from '../../event/event';
-import EventList from '../../EventList/eventList'
+import Event from '../../event/Event';
+import EventList from '../../EventList/EventList'
 
 @connect((store) => {
   return {
@@ -29,7 +29,6 @@ class ResultsView extends React.Component {
   renderEvents(events){
     let lis = [];
     if(events == null) return;
-    console.log(events);
     let lists = this.splitEvents(events,12);
     for (var i = 0; i < lists.length; i++) {
       lis.push(<EventList key={i} number={i} events={lists[i]} class="eventList" size={400}/>);

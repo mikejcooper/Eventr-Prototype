@@ -32,7 +32,6 @@ class SignInModalContainer extends React.Component {
 
   signIn(){
     this.setState({ signInRequest: true });
-    console.log(this.state)
     this.props.dispatch(userSignInRequest(this.state.username, this.state.password));
   }
 
@@ -65,7 +64,6 @@ class SignInModalContainer extends React.Component {
 
 
   render() {
-    console.log(this.props.showModal)
     const modalInstance = (
         <div class="modal-fade">
           <Modal show={this.props.showModal} onHide={this.props.closeModal} >

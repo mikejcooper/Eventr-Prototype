@@ -7,12 +7,8 @@ const initialState = {
 };
 
 export default (state = initialState, action = {}) => {
-    console.log("searchbarreducer called");
-    console.log("HELLLO called");
-	console.log(action.type);
   switch(action.type) {
     case ADD_TAG_SEARCH_BAR:
-		console.log("REDUCER: adding tag: " + action.payload.text);
     	let newState = {
       	...state,
 		tags:  [...state.tags,
@@ -25,7 +21,6 @@ export default (state = initialState, action = {}) => {
 	    return newState;
 	    break;
     case DELETE_TAG_SEARCH_BAR:
-    	console.log("REDUCER: deleting tag: " +  action.payload);
       	return {
 	          ...state,
 	          tags: state.tags.filter(tag => tag.text !== action.payload),
@@ -35,7 +30,6 @@ export default (state = initialState, action = {}) => {
 		return {...state}
 		break;
 	case FETCH_EVENTS_FULFILLED: 
-	console.log("REDUCER: events fullfilled");
 		return {
 		  ...state,
 		  events: action.payload,
@@ -49,8 +43,6 @@ export default (state = initialState, action = {}) => {
 	
 
     default: 
-    	console.log("REDUCER: default called");
-    	console.log(state)
     	return state;
   }
 }

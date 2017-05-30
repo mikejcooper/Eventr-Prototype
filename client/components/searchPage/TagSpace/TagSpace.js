@@ -25,8 +25,6 @@ class TagSpace extends React.Component {
   	}
 
 	renderSuggestTags(){
-		console.log("printing suggestTagSpace");
-		console.log(this.props.suggestTags);
 		let lis = [];
 		for (var i = 18; i >= 0; i--) {
 			lis.push(<SuggestTag class="suggestTag" key ={i} data={this.props.suggestTags[i]}/>);

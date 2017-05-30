@@ -18,8 +18,11 @@ class App extends React.Component {
   }
 
   render() {
-    var opacityVal = 1
-    if(this.props.isSignInModalOpen || this.props.isEventModalOpen){
+      console.log("Starting website...")
+
+    let opacityVal = 1;
+
+      if(this.props.isSignInModalOpen || this.props.isEventModalOpen){
       opacityVal = 0.6
     }
     
@@ -31,7 +34,7 @@ class App extends React.Component {
     };
 
     return (
-      <div class="background" style={containerStyle} >
+      <div style={containerStyle} >
           <div class="row">
              <div class="col-lg-12">
             <NavigationBar/>

@@ -43,8 +43,6 @@ class NavigationBar extends React.Component {
   }
 
   onSubmit() {
-    console.log("onsubmit called");
-    console.log(this.refs.searchInput.value);
     let tags = this.refs.searchInput.value.split(',');
     this.props.dispatch(searchWithSearchBar(tags));
   }

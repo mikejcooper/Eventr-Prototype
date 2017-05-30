@@ -1,6 +1,6 @@
 import React from 'react';
-import css from './eventList.css';
-import Event from '../event/event';
+import css from './EventList.css';
+import Event from '../event/Event';
 
 
 class EventList extends React.Component {
@@ -19,7 +19,6 @@ class EventList extends React.Component {
   }
 
   getIconAndTitle(){
-    console.log("key is: " + this.props.number);
     switch(this.props.number%3){
       case 0:
         return { title: "Ticketed" , image: "http://localhost:2000/images/ticket.png"}
@@ -64,7 +63,6 @@ class EventList extends React.Component {
   }
 
   handleTabClick(goToIndex){
-    console.log(goToIndex);
     if(this.refs.main){
       this.setState({index: goToIndex})
     }

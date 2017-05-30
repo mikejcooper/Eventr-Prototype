@@ -6,8 +6,6 @@ export function userSignupRequest(userData) {
   return dispatch => {
 		axios.post("http://localhost:4000/api/users",{ first_name: userData.first_name, last_name : userData.last_name, email: userData.email, hashed_password: userData.password}, )
 		.then((response) => {
-			console.log("fetching FETCH_SIGNUP_REQUEST");
-			console.log(response)
 			dispatch({type: FETCH_SIGNUP_REQUEST, payload: response});
 		})
 		.catch((err) => {
@@ -15,7 +13,6 @@ export function userSignupRequest(userData) {
 			console.log(err);
 		});
 		
-		console.log("END FETCH_SIGNUP_REQUEST");
 
 		//removal causes problem with .then in  SignupForm -> remove .then?
     return axios.post('/api/users', userData);
@@ -27,8 +24,6 @@ export function userSignInRequest(username, password) {
   return dispatch => {
 		axios.post("http://localhost:4000/api/users/login",{ username: username, hashed_password : password}, )
 		.then((response) => {
-			console.log("XXXX fetching FETCH_SIGNIN_REQUEST");
-			console.log(response.data[ Object.keys( response.data ) ])
 			var success = response.data[ Object.keys( response.data ) ]
 			if(success != 0){
 				dispatch({type: SIGNIN_SUCESS, payload: {username, password} });
@@ -41,7 +36,6 @@ export function userSignInRequest(username, password) {
 			console.log(err);
 		});
 		
-		console.log("HERE 1010000");
-		
+
   }
 }

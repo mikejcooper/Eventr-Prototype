@@ -5,7 +5,7 @@ import webpack from 'webpack';
 
 export default {
   debug: true,
-  devtool: "source-map",
+  devtool: "inline-source-map",
   entry: [
     'webpack-hot-middleware/client',
     path.join(__dirname, '/client/index.js')

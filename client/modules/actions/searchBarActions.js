@@ -23,21 +23,17 @@ export function searchWithSearchBar(tags){
 		headers.tags = result.join(" ");
 		headers.limit = 48;
 		meta.headers = headers;
-		console.log(headers);
 		meta = {
 			params : headers
 		}
-		console.log(meta);
 		axios.get("http://localhost:4000/api/events/search/tags",meta)
 		.then((response) => {
 			// let fetched = splitEvents(response.data,10);
-			console.log("fetching events");
 			response.data.pop();
 			dispatch({type: FETCH_EVENTS_FULFILLED, payload: response.data});
 		})
 		.catch((err) => {
-			// dispatch({type: FETCH_EVENTS_FULFILLED, payload: events});
-			console.log(err);
+            console.log(err);
 		});
 	}
 }
@@ -54,9 +50,6 @@ export function fetchSuggestTags(){
 		axios.get("http://localhost:4000/api/events/search/getTags",meta)
 		.then((response) => {
 			let tags = response.data.tags.split(',');
-			console.log(tags);
-			console.log("fetching fetchSuggestTags");
-			console.log(response.data.tags);
 			dispatch({type: FETCH_SUGGESTTAGS_SEARCH_BAR, payload: tags});
 		})
 		.catch((err) => {

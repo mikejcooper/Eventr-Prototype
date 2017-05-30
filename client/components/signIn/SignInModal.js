@@ -19,7 +19,6 @@ class SignInModal extends React.Component {
   }
 
   closeModal(){
-      console.log("*** Close Signin Modal ***")
       this.props.dispatch(closeSignInModal());
   }
 
