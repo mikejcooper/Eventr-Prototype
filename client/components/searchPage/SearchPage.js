@@ -9,8 +9,8 @@ import ResultsView from './ResultsView/ResultsView';
 class SearchPage extends React.Component {
   render() {
     return (
-      <div>
-        <SearchBar class="search-bar"/>
+      <div class="search-page" >
+        <SearchBar class="search-bar-container"/>
         <TagSpace class="tag-space"/>
         <ResultsView class="results-view"/>
       </div>

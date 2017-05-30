@@ -39,7 +39,7 @@ class SearchBar extends React.Component {
 
     if(this.props.tags == null) return;
     for (var i =  0; i < this.props.tags.length; i++) {
-      lis.push(<SearchTag key={i} value={this.props.tags[i]} class="search-tag"/>);
+      lis.push(<SearchTag key={i} value={this.props.tags[i]} class="search-bar-tag"/>);
     }
     return lis;
   }
@@ -59,14 +59,30 @@ class SearchBar extends React.Component {
   }
 
   render() {
+    let img = "http://localhost:2000/images/event1.jpg"
+    let style_background = { 'backgroundImage': 'url(' + img + ')'};
+
     return (
-      <div class="my-container-search-bar">
+      <div class="search-bar">
+        <div class="background-img" style={style_background}/>
         {this.renderTags(this)}
-          <input type="text" class="searchBar" placeholder="Search..." ref="textInput" onKeyUp={(event) => this.onSearchBarChange(event)} required/>
-          <input type="button" class="searchButton"onClick={() => this.onSearchButtonClick()}/>
+        <input type="text" class="bar" placeholder="Search..." ref="textInput" onKeyUp={(event) => this.onSearchBarChange(event)} required/>
+        <input type="button" class="search-button" onClick={() => this.onSearchButtonClick()}/>
       </div>
     );
   }
 }
 
 export default SearchBar;
+
+
+//
+// <div class="cover-image-container">
+//   <div class="cover-image" style={style_background}/>
+//   <div class="title">
+//     <h1>{this.props.event.name}</h1>
+//   </div>
+//   <div class = "bottom">
+//     {this.props.showModal && this.props.renderOnHover(this.props.event)}
+//   </div>
+// </div>

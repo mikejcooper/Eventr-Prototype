@@ -7,7 +7,7 @@ class EventList extends React.Component {
 
   constructor(){
       super();
-      this.state = {index: 0, elementsDisplayed: 3};
+      this.state = {index: 0, elementsDisplayed: 4};
       this.setNextIndex = this.setNextIndex.bind(this);
       this.getPos = this.getPos.bind(this);
       this.handleTabClick = this.handleTabClick.bind(this);
@@ -146,8 +146,9 @@ class EventList extends React.Component {
           <div class="logo">
             <div class="list-title">{iconAndTitle.title}</div>
             <img class="list-icon" src={iconAndTitle.image}/>
-            
+
           </div>
+
           <div class="navigation">
 
             {maxNumberOfElements > 1 && this.renderTabs(events.length)}
