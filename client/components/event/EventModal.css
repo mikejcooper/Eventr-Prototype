@@ -7,7 +7,7 @@
     }
     .event-modal .modal {
       text-align: center;
-      !opacity: 1;
+      opacity: 1;
     }
     .event-modal .modal:before {
       display: inline-block;

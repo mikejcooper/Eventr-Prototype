@@ -5,6 +5,8 @@ import classnames from 'classnames';
 import validateInput from '../../../server/shared/validations/signup';
 import TextFieldGroup from '../common/TextFieldGroup';
 import axios from 'axios';
+import PropTypes from 'prop-types';
+
 
 
 class SignupForm extends React.Component {
@@ -54,6 +56,7 @@ class SignupForm extends React.Component {
   CheckAccountExists(email){
     axios.get("http://localhost:4000/api/users/" + email)
       .then((response) => {
+        console.log("HERE   " + JSON.stringify(response) )
         if(response['data'] == 0){
           this.props.addFlashMessage({
             type: 'success',
@@ -76,6 +79,7 @@ class SignupForm extends React.Component {
       })
       .catch((err) => {
         // dispatch({type: FETCH_EVENTS_FULFILLED, payload: events});
+        console.log(err);
       });
   }
 
@@ -155,12 +159,12 @@ class SignupForm extends React.Component {
 }
 
 SignupForm.propTypes = {
-  userSignupRequest: React.PropTypes.func.isRequired,
-  addFlashMessage: React.PropTypes.func.isRequired
+  userSignupRequest: PropTypes.func.isRequired,
+  addFlashMessage: PropTypes.func.isRequired
 }
 
 SignupForm.contextTypes = {
-  router: React.PropTypes.object.isRequired
+  router: PropTypes.object.isRequired
 }
 
 export default SignupForm;

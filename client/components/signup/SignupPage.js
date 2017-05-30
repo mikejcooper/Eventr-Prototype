@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { userSignupRequest } from '../../modules/actions/signupActions';
 import { addFlashMessage } from '../../modules/actions/flashMessagesActions';
 import axios from 'axios';
+import PropTypes from 'prop-types';
+
 
 
 
@@ -21,8 +23,8 @@ class SignupPage extends React.Component {
 }
 
 SignupPage.propTypes = {
-  userSignupRequest: React.PropTypes.func.isRequired,
-  addFlashMessage: React.PropTypes.func.isRequired
+  userSignupRequest: PropTypes.func.isRequired,
+  addFlashMessage: PropTypes.func.isRequired
 }
 
 
