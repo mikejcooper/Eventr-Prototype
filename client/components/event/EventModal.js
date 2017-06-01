@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EventModalContainer from './EventModalContainer'
-import { closeEventModal } from '../../modules/actions/modalActions'
+import { closeEventModal } from 'actions/modalActions'
 import css from './EventModal.css'
 
 

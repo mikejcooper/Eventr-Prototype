@@ -1,10 +1,10 @@
 import React from 'react';
 import css from './Home.css'
-import SignInModal from '../signIn/SignInModal';
-import Event from '../event/Event';
-import EventList from '../EventList/EventList'
+import SignInModal from '../../signIn/SignInModal';
+import Event from '../../event/Event';
+import EventList from '../../EventList/EventList'
 import { connect } from 'react-redux';
-import { searchWithSearchBar } from '../../modules/actions/searchBarActions'
+import { searchWithSearchBar } from 'actions/searchBarActions'
 
 @connect((store) => {
   return {

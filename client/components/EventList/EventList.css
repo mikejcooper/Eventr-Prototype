@@ -1,16 +1,13 @@
-.contentContainer {
-	width: 700px;
-    height: 350px;
-    /*border: 1px black solid;*/
-    overflow: hidden;
+.event-list-container {
+    /*display: flex;*/
+    margin:2%;
+    /*flex-direction:column;*/
+    /*justify-content: center;*/
 }
 
-.eventList {
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    background:darkgrey;
+.event-container {
+    /*border: 1px black solid;*/
+    overflow: hidden;
 }
 
 .forward-backward {

@@ -1,0 +1,8 @@
+.container-results-view {
+	display: flex;
+	width: 100%;
+	background-color:darkgrey;
+	justify-content: center;
+
+}
+

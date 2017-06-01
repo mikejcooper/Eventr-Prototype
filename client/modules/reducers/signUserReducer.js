@@ -1,4 +1,4 @@
-import { FETCH_SIGNUP_REQUEST, SIGNIN_SUCESS, SIGNIN_NOT_SUCESS } from '../actions/types';
+import { FETCH_SIGNUP_REQUEST, SIGNIN_SUCESS, SIGNIN_NOT_SUCESS } from 'actions/types';
 
 const initialState = {
   isLoggingIn : false,

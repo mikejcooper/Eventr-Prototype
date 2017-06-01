@@ -1,8 +1,8 @@
 import css from './ResultsView.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import Event from '../../event/Event';
-import EventList from '../../EventList/EventList'
+import Event from '../../../event/Event';
+import EventList from '../../../EventList/EventList'
 
 @connect((store) => {
   return {
@@ -36,11 +36,14 @@ class ResultsView extends React.Component {
     return lis;
   }
 
-  render() {
+
+render() {
     return (
-    	<div class="container-results-view">
-    		{this.renderEvents(this.props.events)}
-    	</div>
+      <div class="container-results-view">
+        <div class="results-view">
+          {this.renderEvents(this.props.events)}
+        </div>
+      </div>
     );
   }
 }

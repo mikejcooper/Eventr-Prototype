@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SignInModalContainer from './SignInModalContainer'
-import { closeSignInModal } from '../../modules/actions/modalActions'
+import { closeSignInModal } from 'actions/modalActions'
 
 
 @connect((store) => {

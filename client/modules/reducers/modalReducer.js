@@ -1,4 +1,4 @@
-import { CLOSE_SIGN_IN_MODAL, OPEN_SIGN_IN_MODAL, CLOSE_EVENT_MODAL, OPEN_EVENT_MODAL } from '../actions/types';
+import { CLOSE_SIGN_IN_MODAL, OPEN_SIGN_IN_MODAL, CLOSE_EVENT_MODAL, OPEN_EVENT_MODAL } from 'actions/types';
 
 const initialState = {
 	// isSignInModalOpen:false,  

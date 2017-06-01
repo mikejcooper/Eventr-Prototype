@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Event.css';
-import { openEventModal } from '../../modules/actions/modalActions';
+import { openEventModal } from 'actions/modalActions';
 import { connect } from "react-redux";
 
 

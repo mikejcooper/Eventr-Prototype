@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './SuggestTag.css';
 import { connect } from "react-redux";
-import {fetchSuggestTags,addTag, searchWithSearchBar} from '../../../../modules/actions/searchBarActions';
+import {fetchSuggestTags,addTag, searchWithSearchBar} from 'actions/searchBarActions';
 
 @connect((store) => {
   return {

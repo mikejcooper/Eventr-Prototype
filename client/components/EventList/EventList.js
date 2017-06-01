@@ -85,7 +85,7 @@ class EventList extends React.Component {
   }
 
   getMaxNumberOfElements(eventSize){
-    let documentWidth = document.documentElement.clientWidth - 200;
+    let documentWidth = document.documentElement.clientWidth;
     let maxElementsDisplayed = Math.floor(documentWidth/eventSize);
     return maxElementsDisplayed;
   }
@@ -135,13 +135,13 @@ class EventList extends React.Component {
       width: size * this.state.elementsDisplayed,
       height: size
     }
-    let styleEventList = {
-      width: size * this.state.elementsDisplayed,
-    }
+    // let styleEventList = {
+    //   width: size * this.state.elementsDisplayed,
+    // }
     let iconAndTitle = this.getIconAndTitle();
     return (
-      <div style={styleEventList} class="eventList" ref="main">
-        <div>
+      <div class="event-list-container" ref="main">
+        <div class>
 
           <div class="logo">
             <div class="list-title">{iconAndTitle.title}</div>
@@ -162,7 +162,7 @@ class EventList extends React.Component {
             </div>
           </div>
         </div>
-    	 <div class="contentContainer" style={styleContainer}>
+    	 <div class="event-container" style={styleContainer}>
         <div id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
           {this.renderEvents(events,size)}
         </div>

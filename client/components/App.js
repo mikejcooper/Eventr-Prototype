@@ -18,33 +18,34 @@ class App extends React.Component {
   }
 
   render() {
-      console.log("Starting website...")
+    console.log("Starting website...")
 
     let opacityVal = 1;
 
-      if(this.props.isSignInModalOpen || this.props.isEventModalOpen){
+    if(this.props.isSignInModalOpen || this.props.isEventModalOpen){
       opacityVal = 0.6
     }
     
     const containerStyle = {
       marginTop: "60px", // Allow children to render without hitting nav bar
     };
+
     const fadeStyle = {
-      opacity: opacityVal // Fade webpage if modal is open 
+      opacity: opacityVal // Fade webpage if modal is open
     };
 
     return (
       <div style={containerStyle} >
           <div class="row">
              <div class="col-lg-12">
-            <NavigationBar/>
-            <FlashMessagesList />
-            <SignInModal/>
-            <EventModal/>
-            <div style={fadeStyle}>
-              {this.props.children}
+              <NavigationBar/>
+              <FlashMessagesList />
+              <SignInModal/>
+              <EventModal/>
+              <div style={fadeStyle}>
+                {this.props.children}
+              </div>
             </div>
-          </div>
           </div>
         </div>
     );

@@ -53,7 +53,12 @@ export default {
     extentions: [ '', '.js', '.less', '.css'], 
     modulesDirectories: [
           'node_modules'
-        ]  
+    ],
+    root: path.resolve(__dirname),
+    alias: {
+      actions: 'client/modules/actions',
+      reducers: 'client/modules/reducers',
+    },
   }, 
   imageWebpackLoader: {
     mozjpeg: {

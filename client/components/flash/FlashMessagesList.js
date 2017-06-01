@@ -1,7 +1,7 @@
 import React from 'react';
 import FlashMessage from './FlashMessage';
 import { connect } from 'react-redux';
-import { deleteFlashMessage } from '../../modules/actions/flashMessagesActions';
+import { deleteFlashMessage } from 'actions/flashMessagesActions';
 import PropTypes from 'prop-types';
 
 

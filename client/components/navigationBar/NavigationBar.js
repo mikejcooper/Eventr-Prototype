@@ -1,7 +1,7 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
-import { openSignInModal } from '../../modules/actions/modalActions';
-import {searchWithSearchBar} from  '../../modules/actions/searchBarActions';
+import { openSignInModal } from 'actions/modalActions';
+import {searchWithSearchBar} from  'actions/searchBarActions';
 import { connect } from "react-redux";
 import css from './NavigationBar.css';
 
