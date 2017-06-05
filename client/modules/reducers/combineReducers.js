@@ -9,5 +9,5 @@ export default combineReducers({
   flashMessages, 
   modal,
   searchBar,
-  user
+  user,
 });

@@ -1,53 +1,61 @@
 import React from 'react';
-import css from './EventList.css';
+import css from './EventCarousel.css';
 import Event from '../event/Event';
+import Measure from 'react-measure'
+import EventCarouselBar from './EventCarouselBar'
 
 
-class EventList extends React.Component {
+class EventCarousel extends React.Component {
 
   constructor(){
-      super();
-      this.state = {index: 0, elementsDisplayed: 4};
-      this.setNextIndex = this.setNextIndex.bind(this);
-      this.getPos = this.getPos.bind(this);
-      this.handleTabClick = this.handleTabClick.bind(this);
-      this.getIconAndTitle = this.getIconAndTitle.bind(this);
+    super();
+    this.state = {carouselIndex: 0, elementsDisplayed: 4};
+    this.setNextIndex = this.setNextIndex.bind(this);
+    this.getPos = this.getPos.bind(this);
+    this.handleTabClick = this.handleTabClick.bind(this);
+    this.getIconAndTitle = this.getIconAndTitle.bind(this);
   }
 
   componentDidMount(){
     this.onresize();
+    window.addEventListener("resize", this.onresize.bind(this));
+  }
+
+  moveCarousel(newIndex){
+    this.setState({carouselIndex: newIndex})
   }
 
   getIconAndTitle(){
     switch(this.props.number%3){
       case 0:
         return { title: "Ticketed" , image: "http://localhost:2000/images/ticket.png"}
-      break;
+        break;
       case 1:
         return { title: "Dancing" , image: "http://localhost:2000/images/discoball.png"}
-      break;
+        break;
       case 2:
         return { title: "Drinking" , image: "http://localhost:2000/images/cocktail.png"}
-      break;
+        break;
       default:
         return { title: "Dancing" , image: "http://localhost:2000/images/discoball.png"}
     }
   }
 
   setNextIndex(numberOfTabs,func){
-    let newIndex = func(this.state.index);
+    let newIndex = func(this.state.carouselIndex);
     if(newIndex == numberOfTabs){
       newIndex = 0;
     } else if(newIndex < 0){
       newIndex = numberOfTabs-1;
     }
-    if(this.refs.main)
-      this.setState({index: newIndex});
+    if(this.refs.main){
+      this.moveCarousel(newIndex)
+    }
   }
 
   getPos(numberOfEvents,numberOfTabs,numberElementsDisplayed,outerWidth){
-    let nextPos = - numberElementsDisplayed * outerWidth * this.state.index;
-    if(this.state.index == numberOfTabs - 1){
+    let nextPos = - numberElementsDisplayed * outerWidth * this.state.carouselIndex;
+    if(this.state.carouselIndex == numberOfTabs - 1){
       nextPos = - (numberOfEvents - numberElementsDisplayed) * outerWidth;
     }
     return nextPos;
@@ -64,20 +72,19 @@ class EventList extends React.Component {
 
   handleTabClick(goToIndex){
     if(this.refs.main){
-      this.setState({index: goToIndex})
+      this.moveCarousel(goToIndex)
     }
   }
 
   onresize() {
     var items = document.querySelectorAll(".event");
-
     let widthComponent = this.outerWidth(items[0]);
     let maxElementsDisplayed = this.getMaxNumberOfElements(widthComponent);
     maxElementsDisplayed = maxElementsDisplayed > this.props.events.length ? this.props.events.length : maxElementsDisplayed;
     if(this.refs.main){
       this.setState({elementsDisplayed: maxElementsDisplayed > 0 ? maxElementsDisplayed : 1 });
     }
-    if(this.state.index > maxElementsDisplayed - 1){
+    if(this.state.carouselIndex > maxElementsDisplayed - 1){
       if(this.refs.main){
         this.setState({index: maxElementsDisplayed });
       }
@@ -90,15 +97,11 @@ class EventList extends React.Component {
     return maxElementsDisplayed;
   }
 
-  componentDidMount() {
-    window.addEventListener("resize", this.onresize.bind(this));
-  }
-
   renderTabs(numberOfEvents){
     let numberOfTabs = Math.ceil(numberOfEvents/this.state.elementsDisplayed);
     let lis = [];
     for (var i = 0; i < numberOfTabs; i++) {
-      if(this.state.index == i){
+      if(this.state.carouselIndex == i){
         lis.push(<button key={i} onClick={this.handleTabClick.bind(this, i)} class="tab lit"></button>);
       } else {
         lis.push(<button key={i} onClick={this.handleTabClick.bind(this, i)} class="tab"></button>);
@@ -119,7 +122,7 @@ class EventList extends React.Component {
     return lis;
   }
 
-	render() {
+  render() {
     let events = this.props.events;
     let size = this.props.size;
     let numberOfElements = events.length;
@@ -135,45 +138,23 @@ class EventList extends React.Component {
       width: size * this.state.elementsDisplayed,
       height: size
     }
-    // let styleEventList = {
-    //   width: size * this.state.elementsDisplayed,
-    // }
     let iconAndTitle = this.getIconAndTitle();
+
     return (
-      <div class="event-list-container" ref="main">
-        <div class>
+      <div class="event-carousel" ref="main">
 
-          <div class="logo">
-            <div class="list-title">{iconAndTitle.title}</div>
-            <img class="list-icon" src={iconAndTitle.image}/>
+        <EventCarouselBar iconAndTitle={iconAndTitle} maxNumberOfElements={maxNumberOfElements} tabs={this.renderTabs(events.length)}
+                          nextIndexL={()=>{this.setNextIndex(numberOfTabs,function (a){return a - 1})}}
+                          nextIndexR={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
 
-          </div>
-
-          <div class="navigation">
-
-            {maxNumberOfElements > 1 && this.renderTabs(events.length)}
-            <div class="forward-backward">
-              <img class="nav-image-back" src="http://localhost:2000/images/left-arrow2.png"/>
-              <div class="circle" value="<" onClick={()=>{this.setNextIndex(numberOfTabs,function (a){return a - 1})}}/>
-            </div>
-            <div class="forward-backward">
-              <img class="nav-image-forward" src="http://localhost:2000/images/right-arrow2.png"/>
-              <div class="circle" value=">" onClick={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
-            </div>
+        <div class="event-container" style={styleContainer}>
+          <div id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
+            {this.renderEvents(events,size)}
           </div>
         </div>
-    	 <div class="event-container" style={styleContainer}>
-        <div id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
-          {this.renderEvents(events,size)}
-        </div>
-       </div>
       </div>
     );
   }
 }
 
-export default EventList
-
-//<img class="nav-image-forward" src={require("../../images/right-arrow2.png")} />
-
-//              // <img class="nav-image-back" src={require("../../images/left-arrow2.png")} />
+export default EventCarousel

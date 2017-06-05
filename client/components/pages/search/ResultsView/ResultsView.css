@@ -1,8 +1,14 @@
-.container-results-view {
+
+.results-view-container1 {
 	display: flex;
 	width: 100%;
-	background-color:darkgrey;
+	background-color: gainsboro;
 	justify-content: center;
 
 }
 
+.results-view-container2{
+	display: inline;
+	justify-content: center;
+
+}

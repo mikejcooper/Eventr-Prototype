@@ -2,7 +2,7 @@ import React from 'react';
 import css from './Home.css'
 import SignInModal from '../../signIn/SignInModal';
 import Event from '../../event/Event';
-import EventList from '../../EventList/EventList'
+import EventList from '../../eventCarousel/EventCarousel'
 import { connect } from 'react-redux';
 import { searchWithSearchBar } from 'actions/searchBarActions'
 
@@ -69,9 +69,11 @@ class Home extends React.Component {
         <div class="my-image">
           {this.renderSvg()}
         </div>
-        <div class="filler"/>
-          {this.renderEvents(this.props.events)}
-       <SignInModal/>
+        <div class="events-view-container1">
+          <div class="events-view-container2">
+            {this.renderEvents(this.props.events)}
+          </div>
+        </div>
       </div>
     );
   }

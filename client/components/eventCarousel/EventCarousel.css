@@ -1,39 +1,16 @@
-.event-list-container {
-    /*display: flex;*/
-    margin:2%;
-    /*flex-direction:column;*/
-    /*justify-content: center;*/
+.event-carousel{
+
 }
 
 .event-container {
     /*border: 1px black solid;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
     overflow: hidden;
 }
 
-.forward-backward {
-    float: left;
-    position: relative;
-}
 
-.nav-image-back {
-    width:25px;
-    height:25px;
-    right: 15px; 
-    top: 12px;
-    z-index: 5;
-    position: absolute;
-    pointer-events:none;
-}
 
-.nav-image-forward {
-    width:25px;
-    height:25px;
-    right: 10px; 
-    top: 12px;
-    z-index: 5;
-    position: absolute;
-    pointer-events:none;
-}
 
 .wrapper {
 	transform: translate3d(0, 0, 0);
@@ -55,7 +32,7 @@
     float: left;
 }
 
-.line {
+event-carousel .line {
     border: 1px black solid;
     height: 0px;
     width: 100%;
@@ -69,15 +46,6 @@
 
 }
 
-.circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 4px;
-    border: 2px black solid;
-    z-index: 4;
-}
-
 .line {
     float: left;
     height: 3px;
@@ -86,26 +54,12 @@
     background-color: #000000;
 }
 
-.navigation {
-    height: 60px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    float: right;
-}
-
-.logo {
-    height: 50px;
-    width: 50px;
-    float: left;
-}
-
 .lit {
 	background-color: #000000;
 }
 
 .event {
-	float: left;
+    float: left;
 }
 
 #navLinks {
@@ -150,15 +104,4 @@
 #navLinks ul li.active:hover {
     background-color: #484848;
     color: #FFFFFF;
-}
-
-.list-icon {
-    float: left;
-    height: 50px;
-    width: 50px;
-}
-
-.list-title {
-    float: left;
-    font-size: 16px;
 }

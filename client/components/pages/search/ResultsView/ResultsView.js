@@ -2,7 +2,7 @@ import css from './ResultsView.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import Event from '../../../event/Event';
-import EventList from '../../../EventList/EventList'
+import EventList from '../../../eventCarousel/EventCarousel'
 
 @connect((store) => {
   return {
@@ -31,7 +31,7 @@ class ResultsView extends React.Component {
     if(events == null) return;
     let lists = this.splitEvents(events,12);
     for (var i = 0; i < lists.length; i++) {
-      lis.push(<EventList key={i} number={i} events={lists[i]} class="eventList" size={400}/>);
+      lis.push(<EventList key={i} number={i} events={lists[i]} class="eventList" size={300}/>);
     }
     return lis;
   }
@@ -39,8 +39,8 @@ class ResultsView extends React.Component {
 
 render() {
     return (
-      <div class="container-results-view">
-        <div class="results-view">
+      <div class="results-view-container1">
+        <div class="results-view-container2">
           {this.renderEvents(this.props.events)}
         </div>
       </div>

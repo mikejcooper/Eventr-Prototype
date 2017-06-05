@@ -7,9 +7,17 @@
     background-color: red;
 }
 
-.eventList {
-	position: relative;
+.events-view-container1 {
+	display: flex;
+	width: 100%;
+	background-color:gainsboro;
+	justify-content: center;
 }
+
+.events-view-container2{
+	justify-content: center;
+}
+
 
 .my-image{
 	position: relative;
