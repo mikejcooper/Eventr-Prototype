@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a55e0e85-b70c-4736-b12b-ea3add882c79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/EventList/EventList.css" afterPath="$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/EventList/EventList.js" afterPath="$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/App.js" afterPath="$PROJECT_DIR$/client/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/navigationBar/NavigationBar.css" afterPath="$PROJECT_DIR$/client/components/navigationBar/NavigationBar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/pages/home/Home.css" afterPath="$PROJECT_DIR$/client/components/pages/home/Home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/pages/home/Home.js" afterPath="$PROJECT_DIR$/client/components/pages/home/Home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/pages/search/ResultsView/ResultsView.css" afterPath="$PROJECT_DIR$/client/components/pages/search/ResultsView/ResultsView.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/pages/search/ResultsView/ResultsView.js" afterPath="$PROJECT_DIR$/client/components/pages/search/ResultsView/ResultsView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/signIn/SignInModal.js" afterPath="$PROJECT_DIR$/client/components/signIn/SignInModal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/modules/actions/types.js" afterPath="$PROJECT_DIR$/client/modules/actions/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/modules/reducers/combineReducers.js" afterPath="$PROJECT_DIR$/client/modules/reducers/combineReducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.css" afterPath="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js" afterPath="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,31 +48,11 @@
       <file leaf-file-name="EventCarousel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="143" column="18" lean-forward="false" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="32" />
+            <state relative-caret-position="469">
+              <caret line="147" column="103" lean-forward="true" selection-start-line="147" selection-start-column="103" selection-end-line="147" selection-end-column="103" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="types.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/modules/actions/types.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventModal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/components/event/EventModal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -99,23 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="combineReducers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/modules/reducers/combineReducers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EventCarouselBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="18" column="99" lean-forward="false" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#48#74#0" expanded="true" />
@@ -124,12 +80,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Home.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/pages/home/Home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/event/Event.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/pages/home/Home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EventCarouselBar.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <marker date="1496737793000" expanded="true" signature="685:714" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,9 +166,10 @@
       <find>forwar</find>
       <find>circ</find>
       <find>line</find>
-      <find>navigation</find>
-      <find>event</find>
       <find>onresize</find>
+      <find>svg</find>
+      <find>event</find>
+      <find>navigation</find>
     </findStrings>
     <replaceStrings>
       <replace>PropTypes</replace>
@@ -239,10 +228,10 @@
         <option value="$PROJECT_DIR$/client/modules/reducers/eventCarouselReducer.js" />
         <option value="$PROJECT_DIR$/client/modules/actions/types.js" />
         <option value="$PROJECT_DIR$/client/modules/reducers/combineReducers.js" />
-        <option value="$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.js" />
         <option value="$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.css" />
-        <option value="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js" />
+        <option value="$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.js" />
         <option value="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.css" />
+        <option value="$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js" />
       </list>
     </option>
   </component>
@@ -557,7 +546,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="navigationBar" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -579,7 +568,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flash" />
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="navigationBar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -774,12 +789,12 @@
       <workItem from="1496095605201" duration="52000" />
       <workItem from="1496095759531" duration="148000" />
       <workItem from="1496100289899" duration="5222000" />
-      <workItem from="1496608522799" duration="10185000" />
+      <workItem from="1496608522799" duration="15527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92341000" />
+    <option name="totallyTimeSpent" value="97683000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -939,14 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/event/Event.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/pages/search/SearchBar/SearchBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -972,16 +979,6 @@
         <state relative-caret-position="210">
           <caret line="14" column="20" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="14" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/pages/home/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="55" column="88" lean-forward="true" selection-start-line="55" selection-start-column="88" selection-end-line="55" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,14 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/pages/home/Home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1231,6 +1220,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="147" column="103" lean-forward="true" selection-start-line="147" selection-start-column="103" selection-end-line="147" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/pages/home/Home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/event/Event.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-601">
@@ -1239,20 +1254,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarousel.js">
+    <entry file="file://$PROJECT_DIR$/client/components/pages/home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="143" column="18" lean-forward="false" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="18" column="99" lean-forward="false" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#48#74#0" expanded="true" />
@@ -1262,9 +1275,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/eventCarousel/EventCarouselBar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="510">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <marker date="1496737793000" expanded="true" signature="685:714" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

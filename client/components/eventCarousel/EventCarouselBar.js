@@ -12,9 +12,12 @@ class EventCarouselBar extends React.Component {
 
   renderSVGLine(){
     return (
-      <svg width="468px" height="5px" viewBox="0 0 468 5" version="1.1">
+      <svg class="svg" width="1049px" height="1px" viewBox="0 0 1049 1" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+        <title>Line</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
         <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="square">
-          <path d="M2.5,2.5 L465.677072,2.5" id="Line" stroke="#979797" strokeWidth="4" fill="#D8D8D8"></path>
+          <path d="M0.5,0.5 L1047.50764,0.5" id="Line" stroke="#979797"></path>
         </g>
       </svg>
     )
@@ -26,11 +29,9 @@ class EventCarouselBar extends React.Component {
 
     return (
       <div class="event-carousel-bar">
-        <h3 class="list-title">{this.props.iconAndTitle.title}</h3>
-          {/*<img class="list-icon" src={this.props.iconAndTitle.image}/>*/}
-        <h1 class="bar-line">
-          hell
-        </h1>
+          <h3 class="list-title">{this.props.iconAndTitle.title}</h3>
+            {/*<img class="list-icon" src={this.props.iconAndTitle.image}/>*/}
+          <div class="bar-line">{this.renderSVGLine()}</div>
 
         <div class="navigation">
 
