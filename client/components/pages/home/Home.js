@@ -61,7 +61,9 @@ class Home extends React.Component {
   render() {
     // this.props.dispatch(searchWithSearchBar([]));
     const containerStyle = {
-      marginTop: "-30px", // Allow children to render without hitting nav bar
+      // marginTop: "-30px", // Allow children to render without hitting nav bar
+      height: '100%',
+
     };
 
     return (

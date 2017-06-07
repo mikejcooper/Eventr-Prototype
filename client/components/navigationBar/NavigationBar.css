@@ -8,7 +8,8 @@
 }
 
 .navbar{
-    transition: opacity .35s ease-out;
+  height: 50px;
+  transition: opacity .35s ease-out;
    -moz-transition: opacity .35s ease-out;
    -webkit-transition: opacity .35s ease-out;
 }

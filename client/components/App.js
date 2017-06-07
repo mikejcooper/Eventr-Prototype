@@ -27,12 +27,12 @@ class App extends React.Component {
     }
     
     const containerStyle = {
-      marginTop: '60px', // Allow children to render without hitting nav bar
+      marginTop: '50px', // Allow children to render without hitting nav bar
+      overflow: 'hidden',
     };
 
     const fadeStyle = {
       opacity: opacityVal, // Fade webpage if modal is open
-      width: '100%',
     };
 
     return (

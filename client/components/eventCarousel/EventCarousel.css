@@ -1,15 +1,14 @@
 .event-carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 
 .event-container {
-    /*border: 1px black solid;*/
-    /*display: flex;*/
-    /*justify-content: space-between;*/
     overflow: hidden;
 }
-
-
 
 
 .wrapper {
@@ -30,6 +29,8 @@
     margin-right: 3px;
     margin-left: 3px;
     float: left;
+    background-color: grey;
+
 }
 
 .event-carousel .line {

@@ -148,7 +148,7 @@ class EventCarousel extends React.Component {
                           nextIndexR={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
 
         <div class="event-container" style={styleContainer}>
-          <div id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
+          <div class="event-container-wrapper" id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
             {this.renderEvents(events,size)}
           </div>
         </div>
