@@ -26,6 +26,7 @@ export function searchWithSearchBar(tags){
 		meta = {
 			params : headers
 		}
+		console.log(tags)
 		axios.get("http://localhost:4000/api/events/search/tags",meta)
 		.then((response) => {
 			// let fetched = splitEvents(response.data,10);

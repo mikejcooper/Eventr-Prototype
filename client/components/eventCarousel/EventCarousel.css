@@ -32,17 +32,22 @@
     float: left;
 }
 
-event-carousel .line {
+.event-carousel .line {
     border: 1px black solid;
     height: 0px;
     width: 100%;
 }
 
 .tabs {
-    display: inline-block;
-    float: left;
-    display: inline-block;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    /*display: inline-block;*/
+    /*float: left;*/
+    /*display: inline-block;*/
+    /*margin-top: 20px;*/
 
 }
 
