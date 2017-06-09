@@ -1,43 +1,46 @@
-.header {
+.home .header {
   font-weight: bold;
   color: green;
 }
 
-.label-default{
+.home.label-default{
     background-color: red;
 }
 
-.events-view-container1 {
+.home .events-view-container1 {
 	display: flex;
 	width: 100%;
 	background-color:gainsboro;
 	justify-content: center;
 }
 
-.events-view-container2{
+.home .events-view-container2{
 	justify-content: center;
+	width: 80%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 
 
-.my-image{
+.home .my-image{
 	position: relative;
 	width: inherit;
 	height: 350px;
 	background-image: url("http://localhost:2000/images/svg_party.png");
 }
 
-.filler {
+.home .filler {
 	width: inherit;
 	height: 225px;
 }
 
-.my-image .svg {
+.home .my-image .svg {
 	width: 100%;
 	margin-top: 30px;
 	fill: #787f6a;
 }
 
-.path {
+.home .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s linear forwards;

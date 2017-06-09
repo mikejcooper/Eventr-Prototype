@@ -39,8 +39,8 @@ class ResultsView extends React.Component {
 
 render() {
     return (
-      <div class="results-view-container1">
-        <div class="results-view-container2">
+      <div class="results-view">
+        <div class="container">
           {this.renderEvents(this.props.events)}
         </div>
       </div>

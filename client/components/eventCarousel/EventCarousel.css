@@ -2,27 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
-.event-container {
+.event-carousel .event-container {
     overflow: hidden;
 }
 
-
-.wrapper {
+.event-carousel .wrapper {
 	transform: translate3d(0, 0, 0);
 	transition: transform .5s ease-in-out;
 }
 
-.block {
+.event-carousel .block {
 	width: 50px;
 	height: 50px;
 	float: left;
 }
 
-.tab {
+.event-carousel .tab {
 	height: 1px;
 	width: 22px;
     border:none;
@@ -39,20 +36,13 @@
     width: 100%;
 }
 
-.tabs {
+.event-carousel .tabs {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-
-    /*display: inline-block;*/
-    /*float: left;*/
-    /*display: inline-block;*/
-    /*margin-top: 20px;*/
-
 }
 
-.line {
+.event-carousel .line {
     float: left;
     height: 3px;
     width: 50px;
@@ -60,25 +50,27 @@
     background-color: #000000;
 }
 
-.lit {
+.event-carousel .lit {
 	background-color: #000000;
 }
 
-.event {
+.event-carousel .event {
     float: left;
 }
 
-#navLinks {
+.event-carousel #navLinks {
     text-align: center;
     width: 550px;
 }
-#navLinks ul {
+
+.event-carousel #navLinks ul {
     margin: 0px;
     padding: 0px;
     display: inline-block;
     margin-top: 6px;
 }
-#navLinks ul li {
+
+.event-carousel #navLinks ul li {
     float: left;
     text-align: center;
     margin: 10px;
@@ -89,25 +81,29 @@
     border-radius: 50%;
     border: black 5px solid;
 }
-#navLinks ul li:hover {
+
+.event-carousel #navLinks ul li:hover {
     background-color: #FFFF00;
 }
-#navLinks ul li.active {
+
+.event-carousel #navLinks ul li.active {
     background-color: #333333;
     color: #FFFFFF;
     outline-width: 7px;
 }
-#navLinks ul li.active:hover {
+
+.event-carousel #navLinks ul li.active:hover {
     background-color: #484848;
     color: #FFFFFF;
 }
 
-#navLinks ul li.active {
+.event-carousel #navLinks ul li.active {
     background-color: #333333;
     color: #FFFFFF;
     outline-width: 7px;
 }
-#navLinks ul li.active:hover {
+
+.event-carousel #navLinks ul li.active:hover {
     background-color: #484848;
     color: #FFFFFF;
 }

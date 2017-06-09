@@ -35,8 +35,8 @@ class TagSpace extends React.Component {
 	
 	render() {
 	    return (
-	    	<div class="my-tagspace-container event-modal">
-	    		<div class="content-space">
+	    	<div class="tag-space">
+	    		<div class="container">
 	    			{this.renderSuggestTags()}
 	    		</div>
 	    	</div>

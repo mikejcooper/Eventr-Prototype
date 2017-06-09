@@ -92,7 +92,7 @@ class EventCarousel extends React.Component {
   }
 
   getMaxNumberOfElements(eventSize){
-    let documentWidth = document.documentElement.clientWidth;
+    let documentWidth =this.outerWidth(document.querySelectorAll('.event-carousel')[0])
     let maxElementsDisplayed = Math.floor(documentWidth/eventSize);
     return maxElementsDisplayed;
   }
@@ -141,14 +141,14 @@ class EventCarousel extends React.Component {
     let iconAndTitle = this.getIconAndTitle();
 
     return (
-      <div class="event-carousel" ref="main">
+      <div class="event-carousel" id='carousel' ref="main">
 
         <EventCarouselBar iconAndTitle={iconAndTitle} maxNumberOfElements={maxNumberOfElements} tabs={this.renderTabs(events.length)}
                           nextIndexL={()=>{this.setNextIndex(numberOfTabs,function (a){return a - 1})}}
                           nextIndexR={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
 
         <div class="event-container" style={styleContainer}>
-          <div class="event-container-wrapper" id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
+          <div class="wrapper" id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
             {this.renderEvents(events,size)}
           </div>
         </div>

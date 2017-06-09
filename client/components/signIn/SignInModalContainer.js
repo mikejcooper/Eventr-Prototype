@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import css from './main.css'
+import css from './SignInModal.css'
 import TextFieldGroup from '../common/TextFieldGroup';
 import FacebookSocialLogin from './FacebookSocialLogin'
 import GoogleSocialLogin from './GoogleSocialLogin'
@@ -66,14 +66,14 @@ class SignInModalContainer extends React.Component {
   render() {
     const modalInstance = (
         <div class="modal-fade">
-          <Modal show={this.props.showModal} onHide={this.props.closeModal} >
+          <Modal class="signIn-modal" show={this.props.showModal} onHide={this.props.closeModal} >
             <Modal.Body>
               <div class="row">
                 <h3 class="text-center">Welcome Back!</h3>
                 <p class="text-center">We've been waiting to show you <br></br> all the new events we found.</p>
               </div>
 
-              <div class="row d-flex-centre social-buttons-container">
+              <div class="row centre social-buttons-container">
                 <div class="left">
                     <FacebookSocialLogin/>
                 </div>
@@ -81,7 +81,7 @@ class SignInModalContainer extends React.Component {
                     <GoogleSocialLogin/>
                 </div>
               </div>
-              <div class="d-flex-centre">
+              <div class="centre">
 
                 <form onSubmit={this.onSubmit}>
 
@@ -100,12 +100,12 @@ class SignInModalContainer extends React.Component {
 
                 </form>
               </div>
-              <div class="d-flex-centre">
+              <div class="centre">
                 <a href="https://en.wikipedia.org/wiki/Password" class="">
                   <p class="text-center">Forgotten your password?</p>
                 </a>
               </div>
-              <div class="d-flex-centre">
+              <div class="centre">
                 <a href="/signup" class="">
                     <span class="i-gplus icon"></span>
                     <span class="text">SIGN UP</span>
@@ -115,7 +115,7 @@ class SignInModalContainer extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button class = "left" onClick={this.props.closeModal}>Close</Button>
-            <div class = "d-flex-centre">
+            <div class = "centre">
               {this.renderSignInSpinner()}
             </div>
             <Button class = "" onClick={this.signIn}>LOGIN IN</Button>

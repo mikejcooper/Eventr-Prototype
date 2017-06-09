@@ -1,6 +1,8 @@
+.event {
+	position: relative;
+}
 
-
-.title {
+.event .title {
 	pointer-events:none;
 	top: 0;
 	padding-left: 15px;
@@ -10,18 +12,14 @@
 	z-index: 1
 }
 
-.event {
-	position: relative;
-}
-
-.footer {
+.event .footer {
 	pointer-events:none;
 	width: inherit;
 	position: absolute;
     bottom: 1%;
 }
 
-.image {
+.event .image {
 	z-index: 0;
 	width: inherit;
 	height: inherit;
@@ -30,23 +28,21 @@
 	filter: brightness(80%);
 }
 
-.darken {
+.event .darken {
 	filter: brightness(60%);
 }
 
-.personIcon {
+.event .personIcon {
 	width:25px;
 	height:25px;
 	filter: invert(100%);
 }
 
-.button-tags {
+.event .button-tags {
 	pointer-events:auto;
 	border-radius: 40px;
 	color: #FFFFFF;
 	margin: 5px;
-/*	margin-left: 5px;
-	margin-right: 5px;*/
 	border: 2px solid #FFFFFF;
 	background-color: Transparent;
 	border-color: #FFFFFF;
@@ -55,27 +51,27 @@
 	border-width: 1px;
 }
 
-.button-tags:hover {
+.event .button-tags:hover {
 	color: #000000;
 	background-color: #FFFFFF;
-} 
+}
 
-.tags {
+.event .tags {
 	width: inherit;
 	text-align:center;
 }
 
-.info {
+.event .info {
 	width: inherit;
 	margin-bottom: 5px;
 }
 
-.venue-size {
+.event .venue-size {
 	float:right;
 	margin-right: 10px;
 }
 
-.price {
+.event .price {
 	width: 20%;
 	float:left;
 	color: #FFFFFF;

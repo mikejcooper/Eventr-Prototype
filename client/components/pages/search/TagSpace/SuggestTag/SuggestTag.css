@@ -1,4 +1,4 @@
-.suggestTag {
+.suggest-tag {
 	float: left;
 	color: gray;
 	background-color: #FFFFFF;
@@ -12,7 +12,7 @@
 	border: 1px solid #EEEEEE;
 }
 
-.suggestTag:hover {
+.suggest-tag:hover {
 	color: #000000;
 	background-color: #EEEEEE;
 } 

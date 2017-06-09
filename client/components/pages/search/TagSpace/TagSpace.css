@@ -1,4 +1,4 @@
-.my-tagspace-container {
+tag-space {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -6,13 +6,12 @@
 }
 
 
-.content-space {
-	position: relative;
+.tag-space .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	-webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-	margin:10px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 0.4%;
+	width:100%
 }
-

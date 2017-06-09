@@ -1,35 +1,35 @@
 
-.col-centered{
+signIn-modal .col-centered{
 float: none;
 margin: 0 auto;
 }
 
-.d-flex-centre {
+.signIn-modal .centre {
   display: flex;
   justify-content: center;
 }
 
-.left, .right {
+.signIn-modal .left, .right {
   display: flex;
   justify-content: center;
   padding-left: 22px;
 }
 
-.social-buttons-container{
+.signIn-modal .social-buttons-container{
   padding-top: 10px;
   padding-bottom: 10px
 
 }
 
-.buttons{
+.signIn-modal .buttons{
   max-width: 90%;
 }
 
-.hide {
+.signIn-modal .hide {
    visibility: hidden;
 }
 
-@media screen and (min-width: 768px) {
+.signIn-modal @media screen and (min-width: 768px) {
     .modal-dialog {
       width: 500px; /* either % (e.g. 60%) or px (400px) */
 			display: inline-block;

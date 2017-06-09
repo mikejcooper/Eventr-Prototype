@@ -20,7 +20,7 @@ class SearchTag extends React.Component {
 
   render() {
     return (
-      <div class="wrapper">
+      <div class="search-tag">
         <div class="my-left">
           <button id={this.props.value.id} class="delete-button" onClick={() => this.removeTag()}>X</button>
           <div id={this.props.value.id} class="tag">{this.props.value.text}</div>

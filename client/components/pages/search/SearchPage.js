@@ -11,8 +11,8 @@ class SearchPage extends React.Component {
     return (
       <div class="search-page" >
         <SearchBar class="search-bar-container"/>
-        <TagSpace class="tag-space"/>
-        <ResultsView class="results-view"/>
+        <TagSpace class="tag-space-container"/>
+        <ResultsView class="results-view-container"/>
       </div>
     );
   }

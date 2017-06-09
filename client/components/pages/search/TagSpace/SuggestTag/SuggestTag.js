@@ -26,7 +26,7 @@ class SuggestTag extends React.Component {
 
   render() {
     return (
-      <div class="suggestTag" onClick={() => this.addTag()}>
+      <div class="suggest-tag" onClick={() => this.addTag()}>
       	{this.props.data}
       </div>
     );

@@ -12,7 +12,6 @@ class NavigationBar extends React.Component {
   constructor() {
     super()
     this.state = {
-      collapsed: true,
       ScrollState: 1,
       searching: false
     };
@@ -59,50 +58,41 @@ class NavigationBar extends React.Component {
   }
 
   render() {
-    const { location } = this.props;
-    const { collapsed } = this.state;
-    const navClass = collapsed ? "collapse" : "";
     var navOpacity = {
       opacity: this.state.ScrollState,
     };
 
     return (
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
-        <div class="container">
-        <Link class="navbar-header search-icon-navigation" onClick={this.toggleCollapse.bind(this)} to="/search"></Link>
-                     
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/#"><img src="http://localhost:2000/images/logo_text.png"></img></a>
+        <nav class="navbar1 navbar-fixed-top" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
+          <div class="logo-container">
+            <a href="/#"><img class="logo" src="http://localhost:2000/images/logo_text.png"></img></a>
           </div>
-          <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
+
+          <div class="search-container">
+            <h2>Search</h2>
+          </div>
+
+          <div class="right-nav-container">
             <ul class="nav navbar-nav navbar-right">
-              <li >
-                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
+              <li>
+                <IndexLink to="/">Home</IndexLink>
               </li>
               <li >
-                <Link to="/signup" onClick={this.toggleCollapse.bind(this)}>Sign Up</Link>
+                <Link to="/signup">Sign Up</Link>
               </li>
-              <li >
+              <li>
                 <Link onClick={this.toggleCollapse.bind(this) && this.openSignInModal.bind(this)}>Sign In </Link>
               </li>
             </ul>
           </div>
-        </div>
-
-      </nav>
+        </nav>
     );
   }
 }
 
 export default NavigationBar
 
-// <img class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} src="http://localhost:2000/images/search-icon.png"/> 
+// <img class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} src="http://localhost:2000/images/search-icon.png"/>
 //  <Link class="navbar-header fixed my-button search-icon" onClick={this.toggleCollapse.bind(this)} to="/search"></Link>
 //
 // <div class="navbar-header fixed my-button search-icon" onClick={this.handleSearchClick} >

@@ -29,6 +29,7 @@ class App extends React.Component {
     const containerStyle = {
       marginTop: '50px', // Allow children to render without hitting nav bar
       overflow: 'hidden',
+      width:'100%'
     };
 
     const fadeStyle = {
