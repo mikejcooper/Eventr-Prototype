@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Event.css';
+import css from './EventCarouselItem.css';
 import { openEventModal } from 'actions/modalActions';
 import { connect } from "react-redux";
 
@@ -23,8 +23,9 @@ class Event extends React.Component {
       this.setState({hover: false});
   }
 
-  handleImgClick(event_data){
-      this.props.dispatch(openEventModal(event_data));
+  handleImgClick(data){
+      // this.props.dispatch(openEventModal(data));
+      window.location = '/e' + data.id
   }
 
   renderTags(tags) {

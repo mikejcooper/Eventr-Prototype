@@ -1,7 +1,7 @@
 import css from './ResultsView.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import Event from '../../../event/Event';
+import Event from '../../../eventCarousel/EventCarouselItem';
 import EventList from '../../../eventCarousel/EventCarousel'
 
 @connect((store) => {

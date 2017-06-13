@@ -58,6 +58,7 @@ export default {
     alias: {
       actions: 'client/modules/actions',
       reducers: 'client/modules/reducers',
+      svg: 'client/components/svg',
     },
   }, 
   imageWebpackLoader: {

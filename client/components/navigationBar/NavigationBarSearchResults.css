@@ -1,0 +1,14 @@
+.search-expanded .input-container{
+
+  width: 220px;
+  height: 25px;
+
+  border-top-right-radius: 30px 30px;
+  border-bottom-right-radius: 30px 30px;
+
+}
+
+.search-expanded .input{
+  width: 210px;
+
+}

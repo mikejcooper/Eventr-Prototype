@@ -18,6 +18,9 @@ export const FETCH_EVENTS_REJECTED = 'FETCH_EVENTS_REJECTED';
 export const FETCH_SIGNUP_REQUEST = 'FETCH_SIGNUP_REQUEST';
 export const SIGNIN_SUCESS = 'SIGNIN_SUCESS';
 export const SIGNIN_NOT_SUCESS = 'SIGNIN_NOT_SUCESS';
-// Event Carousel
+// Event actions
+export const GET_EVENT_DATA = 'GET_EVENT_DATA';
+
+
 
 

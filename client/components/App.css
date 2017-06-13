@@ -1,0 +1,44 @@
+.flex-centre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:focus {
+    outline:none !important;
+}
+
+.cursor{
+    cursor:pointer;
+}
+
+.resize-img{
+    display: block;
+    max-width: 100%;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+.button-red {
+    fill:#B51212;
+    background-color:#B51212 !important;
+}
+
+.button-red:hover {
+    fill: #9c0b0b;
+    background-color:#9c0b0b !important;
+}
+
+/** {*/
+    /*font-family: "Helvetica Neue", Helvetica, sans-serif;*/
+/*}*/
+
+body {
+    font-family: "Lucida Grande";
+    background-color: gainsboro;
+}
+
+
+
+

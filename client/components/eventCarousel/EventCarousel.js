@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './EventCarousel.css';
-import Event from '../event/Event';
+import Event from './EventCarouselItem';
 import Measure from 'react-measure'
 import EventCarouselBar from './EventCarouselBar'
 
@@ -138,15 +138,18 @@ class EventCarousel extends React.Component {
       width: size * this.state.elementsDisplayed,
       height: size
     }
+    let styleContainer1 = {
+      width: size *  this.state.elementsDisplayed - 16,
+    }
     let iconAndTitle = this.getIconAndTitle();
 
     return (
       <div class="event-carousel" id='carousel' ref="main">
-
-        <EventCarouselBar iconAndTitle={iconAndTitle} maxNumberOfElements={maxNumberOfElements} tabs={this.renderTabs(events.length)}
+        <div style={styleContainer1}>
+          <EventCarouselBar iconAndTitle={iconAndTitle} maxNumberOfElements={maxNumberOfElements} tabs={this.renderTabs(events.length)}
                           nextIndexL={()=>{this.setNextIndex(numberOfTabs,function (a){return a - 1})}}
                           nextIndexR={()=>{this.setNextIndex(numberOfTabs,function (a){return a + 1})}}/>
-
+        </div>
         <div class="event-container" style={styleContainer}>
           <div class="wrapper" id="wrapper" ref="wrap" class="wrapper" style={styleWrapper} >
             {this.renderEvents(events,size)}

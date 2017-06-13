@@ -2,8 +2,9 @@ import React from 'react';
 import NavigationBar from './navigationBar/NavigationBar';
 import FlashMessagesList from './flash/FlashMessagesList';
 import SignInModal from './signIn/SignInModal';
-import EventModal from './event/EventModal';
+import EventModal from './EventModal/EventModal';
 import { connect } from "react-redux";
+import css from './App.css';
 
 
 @connect((store) => {

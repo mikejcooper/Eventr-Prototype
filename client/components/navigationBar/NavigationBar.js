@@ -3,8 +3,9 @@ import { IndexLink, Link } from 'react-router';
 import { openSignInModal } from 'actions/modalActions';
 import {searchWithSearchBar} from  'actions/searchBarActions';
 import { connect } from "react-redux";
+import NavigationBarSearch from './NavigationBarSearch';
+import SignUpButton from 'svg/SignUpButton';
 import css from './NavigationBar.css';
-
 
 // Maps dispatcher to props
 @connect()
@@ -65,25 +66,21 @@ class NavigationBar extends React.Component {
     return (
         <nav class="navbar1 navbar-fixed-top" style = {navOpacity} onScroll={this.handleScroll.bind(this)}>
           <div class="logo-container">
-            <a href="/#"><img class="logo" src="http://localhost:2000/images/logo_text.png"></img></a>
+            <a href="/#"><img class="logo resize-img" src="http://localhost:2000/images/logo_text.png"></img></a>
           </div>
 
           <div class="search-container">
-            <h2>Search</h2>
+            <NavigationBarSearch/>
           </div>
 
           <div class="right-nav-container">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <IndexLink to="/">Home</IndexLink>
-              </li>
-              <li >
-                <Link to="/signup">Sign Up</Link>
-              </li>
-              <li>
-                <Link onClick={this.toggleCollapse.bind(this) && this.openSignInModal.bind(this)}>Sign In </Link>
-              </li>
-            </ul>
+            <div class="right-nav">
+
+              <div class="nav-div flex-centre min-div"><Link class="no-line" onClick={this.toggleCollapse.bind(this) && this.openSignInModal.bind(this)}><h4 class="cursor">Log In</h4></Link></div>
+              <div class="nav-div flex-centre min-div"><a href="/signup"> <SignUpButton/> </a></div>
+              <div class="nav-div flex-centre"><a class="no-line" href="/signup"> <span class="bullet">•••</span> </a></div>
+
+            </div>
           </div>
         </nav>
     );

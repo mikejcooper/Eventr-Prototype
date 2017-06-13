@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import css from './EventModal.css'
-import TextFieldGroup from '../common/TextFieldGroup';
 
 
 class EventModalContainer extends React.Component { 

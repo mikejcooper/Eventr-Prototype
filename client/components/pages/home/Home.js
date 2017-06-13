@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './Home.css'
 import SignInModal from '../../signIn/SignInModal';
-import Event from '../../event/Event';
+import Event from '../../eventCarousel/EventCarouselItem';
 import EventCarousel from '../../eventCarousel/EventCarousel'
 import { connect } from 'react-redux';
 import { searchWithSearchBar } from 'actions/searchBarActions'
