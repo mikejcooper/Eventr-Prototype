@@ -8,7 +8,7 @@ import css from './EventModal.css'
 
 @connect((store) => {
   return {
-    modalEvent: store.modal.eventBool,
+    modalEvent: store.modal.eventOpen,
     modalData: store.modal.event_modal_data
   };
 })

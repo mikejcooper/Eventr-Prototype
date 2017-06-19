@@ -18,7 +18,7 @@ export default function reducer(state = initialState, action) {
       break
      
     // case CLOSE_SIGN_IN_MODAL:
-    //   state = {...state, signInBool: false}
+    //   state = {...state, signInOpen: false}
     //   break
 
    }

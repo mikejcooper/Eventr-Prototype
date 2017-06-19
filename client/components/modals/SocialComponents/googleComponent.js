@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import GoogleSignInButton from 'svg/GoogleSignInButton'
 
 class GoogleLogin extends Component {
   constructor(props) {
@@ -98,7 +99,7 @@ class GoogleLogin extends Component {
   render() {
     return (
       <span>
-        <input type="image" onClick={this.signIn} class="buttons" src="http://localhost:2000/images/google_button.png" />
+        <div onClick={this.signIn} class="buttons cursor"><GoogleSignInButton/></div>
       </span>
     );
   }

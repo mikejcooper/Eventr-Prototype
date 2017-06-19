@@ -1,0 +1,96 @@
+
+.signIn-modal .data-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+.signIn-modal .welcome-message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+
+.signIn-modal .login-container{
+    width: 50%;
+}
+
+.signIn-modal .social-buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px*/
+    /*width: 200px;*/
+    width: 100%;
+}
+
+.signIn-modal .social-buttons-container .svg{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.login-container .login{
+    width: 100%;
+}
+
+
+.signIn-modal .centre {
+  display: flex;
+  justify-content: center;
+}
+
+.signIn-modal .modal-footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.signIn-modal .modal-footer-container .left {
+  display: flex;
+  justify-content: flex-start;
+  /*padding-left: 22px;*/
+}
+
+.signIn-modal .modal-footer-container .right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+.signIn-modal .hide {
+   visibility: hidden;
+}
+
+.signIn-modal @media screen and (min-width: 768px) {
+    .modal-dialog {
+      width: 500px; /* either % (e.g. 60%) or px (400px) */
+			display: inline-block;
+			text-align: left;
+			vertical-align: middle;
+    }
+    .modal {
+  		text-align: center;
+        opacity: 1;
+		}
+    .modal:before {
+	    display: inline-block;
+	    vertical-align: middle;
+	    content: " ";
+	    height: 100%;
+  }
+}
+

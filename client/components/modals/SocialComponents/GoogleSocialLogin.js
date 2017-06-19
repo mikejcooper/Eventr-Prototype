@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleLogin from './SocialComponents/googleComponent';
+import GoogleLogin from './googleComponent';
 
 
 class GoogleSocialLogin extends React.Component {

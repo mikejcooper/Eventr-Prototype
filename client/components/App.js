@@ -1,7 +1,8 @@
 import React from 'react';
 import NavigationBar from './navigationBar/NavigationBar';
 import FlashMessagesList from './flash/FlashMessagesList';
-import SignInModal from './signIn/SignInModal';
+import SignInModal from './modals/signIn/SignInModal';
+import SignUpModal from './modals/signUp/SignUpModal';
 import EventModal from './EventModal/EventModal';
 import { connect } from "react-redux";
 import css from './App.css';
@@ -9,8 +10,8 @@ import css from './App.css';
 
 @connect((store) => {
   return {
-    isSignInModalOpen: store.modal.signInBool,
-    isEventModalOpen: store.modal.eventBool
+    isSignInModalOpen: store.modal.signInOpen,
+    isEventModalOpen: store.modal.eventOpen
   };
 })
 class App extends React.Component {
@@ -44,6 +45,7 @@ class App extends React.Component {
               <NavigationBar/>
               <FlashMessagesList />
               <SignInModal/>
+              <SignUpModal/>
               <EventModal/>
               <div style={fadeStyle}>
                 {this.props.children}

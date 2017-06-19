@@ -40,7 +40,7 @@ class Event extends React.Component {
 
               <div class="title">
                 <div class="expand-container">
-                  <Textfit mode="single">{data.name} </Textfit>
+                  <Textfit mode="single" max={45}><b>{data.name}</b></Textfit>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ class Event extends React.Component {
 
               <div class="title venue">
                 <div class="expand-container">
-                  <Textfit mode="single">{data.name} </Textfit>
+                  <Textfit mode="single" max={35}>{data.name} </Textfit>
                 </div>
               </div>
 

@@ -1,8 +1,7 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styles from './facebook.scss';
-// import objectToParams from './objectToParams';
+import FacebookSignInButton from'svg/FacebookSignInButton'
 
 const getIsMobile = () => {
   let isMobile = false;
@@ -16,7 +15,6 @@ const getIsMobile = () => {
   return isMobile;
 };
 
-// https://www.w3.org/TR/html5/disabled-elements.html#disabled-elements
 const _shouldAddDisabledProp = (tag) => [
   'button',
   'input',
@@ -77,6 +75,7 @@ class FacebookLogin extends React.Component {
     isSdkLoaded: false,
     isProcessing: false,
   };
+
 
   componentDidMount() {
     this._isMounted = true;
@@ -200,7 +199,7 @@ class FacebookLogin extends React.Component {
     }
 
     if (this.props.isMobile && !disableMobileRedirect) {
-      window.location.href = `//www.facebook.com/dialog/oauth?${objectToParams(params)}`;
+      window.location.href = `//www.facebook.com/dialog/oauth?${this.objectToParams(params)}`;
     } else {
       window.FB.login(this.checkLoginState, { scope, auth_type: params.auth_type });
     }
@@ -211,10 +210,12 @@ class FacebookLogin extends React.Component {
   render() {
     return (
       <span>
-        <input type="image" onClick={this.click} class="buttons" src="http://localhost:2000/images/facebook_button.png" />
+        <div onClick={this.click} class="cursor"><FacebookSignInButton/></div>
       </span>
     );
   }
 }
 
 export default FacebookLogin;
+
+

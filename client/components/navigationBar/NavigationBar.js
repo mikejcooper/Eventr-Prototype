@@ -1,6 +1,7 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import { openSignInModal } from 'actions/modalActions';
+import { openSignUpModal } from 'actions/modalActions';
 import {searchWithSearchBar} from  'actions/searchBarActions';
 import { connect } from "react-redux";
 import NavigationBarSearch from './NavigationBarSearch';
@@ -33,9 +34,8 @@ class NavigationBar extends React.Component {
     this.props.dispatch(openSignInModal());
   }
 
-  toggleCollapse() {
-    const collapsed = !this.state.collapsed;
-    this.setState({collapsed});
+  openSignUpModal() {
+    this.props.dispatch(openSignUpModal());
   }
 
   handleSearchClick(){
@@ -76,8 +76,8 @@ class NavigationBar extends React.Component {
           <div class="right-nav-container">
             <div class="right-nav">
 
-              <div class="nav-div flex-centre min-div"><Link class="no-line" onClick={this.toggleCollapse.bind(this) && this.openSignInModal.bind(this)}><h4 class="cursor">Log In</h4></Link></div>
-              <div class="nav-div flex-centre min-div"><a href="/signup"> <SignUpButton/> </a></div>
+              <div class="nav-div flex-centre min-div"><Link class="no-line" onClick={this.openSignInModal.bind(this)}><h4 class="cursor">Log In</h4></Link></div>
+              <div class="nav-div flex-centre min-div"><a onClick={this.openSignUpModal.bind(this)}> <SignUpButton/> </a></div>
               <div class="nav-div flex-centre"><a class="no-line" href="/signup"> <span class="bullet">•••</span> </a></div>
 
             </div>

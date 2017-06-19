@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SignInModalContainer from './SignInModalContainer'
+import SignUpModalContainer from './SignUpModalContainer'
 import { closeSignInModal } from 'actions/modalActions'
+
 
 
 @connect((store) => {
   return {
-    modalSignIn: store.modal.signInBool,
-    loginSucess:store.user.loginSucess,
-    loginFailed:store.user.loginFailed
+    modalSignUp: store.modal.signUpOpen
+    // loginSucess:store.user.loginSucess,
+    // loginFailed:store.user.loginFailed
   };
 })
 class SignInModal extends React.Component {
@@ -19,19 +20,19 @@ class SignInModal extends React.Component {
   }
 
   closeModal(){
-      this.props.dispatch(closeSignInModal());
+      this.props.dispatch(closeSignUpModal());
   }
 
 
   render() {
-    this.state.showModal = this.props.modalSignIn
-    this.state.loginFailed = this.props.loginFailed
+
+    this.state.showModal = this.props.modalSignUp
     if(this.props.loginSucess){
       this.closeModal
     }
 
     return(
-      <SignInModalContainer showModal = {this.state.showModal} closeModal = { this.closeModal } loginFailed = {this.state.loginFailed}/>
+      <SignUpModalContainer showModal = {this.state.showModal} closeModal = { this.closeModal } />
     )
   }
 }

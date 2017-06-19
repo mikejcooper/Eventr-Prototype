@@ -1,5 +1,6 @@
 import React from 'react';
-import FacebookLogin from './SocialComponents/facebookComponent'
+import FacebookLogin from './facebookComponent'
+// import FacebookLogin from 'react-facebook-login';
 
 
 class FacebookSocialLogin extends React.Component {
@@ -8,7 +9,8 @@ class FacebookSocialLogin extends React.Component {
     this.responseFacebook = this.responseFacebook.bind(this)
   }
 
-  responseFacebook(){
+  responseFacebook(res){
+    console.log(res)
   }
 
   render() {
@@ -19,6 +21,7 @@ class FacebookSocialLogin extends React.Component {
           autoLoad={true}
           fields="name,email,picture"
           callback={this.responseFacebook}
+          cssClass="custom-fb"
         >
         </FacebookLogin>
       </div>
